@@ -1,6 +1,8 @@
 # Extra for Mac
 .idea
 .DS_Store
+application.properties
+
 
 ### Java ###
 # Compiled class file
