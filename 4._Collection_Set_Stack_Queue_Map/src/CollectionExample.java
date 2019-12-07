@@ -4,18 +4,18 @@ public class CollectionExample {
 
     public static void main(String[] args) {
 
-        // Instantiating a Collection of Integers as an ArrayList, because Collection is an interface an cannot
+        // Instantiating a Collection of Integers as an ArrayList, because Collection is an interface and cannot
         // be instantiated
         Collection<Integer> integerCollection = new ArrayList<>();
 
-        //Instantiating a Collection of Strings as a LinkedList.
+        // Instantiating a Collection of Strings as a LinkedList.
         Collection<String> stringCollection = new LinkedList<>();
 
         // add element to the collections
         integerCollection.add(1);
         integerCollection.add(2);
         integerCollection.add(3);
-        stringCollection.add("Haps");
+        stringCollection.add("Niki");
         System.out.println("After adding elements, Collection consists of: " + integerCollection + "\n");
 
         // Removes all elements in the Collection
@@ -43,7 +43,7 @@ public class CollectionExample {
                 integerCollection.remove(10) + "\n");
 
         // returns the size of the Collection (the amount of elements)
-        System.out.println("The amount of elements in intergerCollection is: "+ integerCollection.size());
+        System.out.println("The amount of elements in integerCollection is: "+ integerCollection.size());
 
         // saves the Collection in an object[] array - the length of the array equals the Collections size
         Object[] objectArray = integerCollection.toArray();
@@ -53,7 +53,7 @@ public class CollectionExample {
         integerCollection.add(3);
         integerCollection.add(10);
 
-        // Different ways of iterating through a Collection - with a for each
+        // Different ways of iterating through a Collection - with a foreach loop
         for (Integer element : integerCollection) {
             System.out.println(element);
         }
@@ -67,7 +67,7 @@ public class CollectionExample {
         System.out.println();
 
         // Iterating through the Collection with a forEach and lambda expression
-        integerCollection.forEach(element -> System.out.println(element));
+        integerCollection.forEach(System.out::println);
 
 
 

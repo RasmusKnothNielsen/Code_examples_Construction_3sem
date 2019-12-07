@@ -1,9 +1,11 @@
+import java.util.Stack;
+
 public class StackExample {
 
     public static void main(String[] args) {
 
         // Instantiating a Stack object
-        java.util.Stack<Integer> stack = new java.util.Stack<>();
+        Stack<Integer> stack = new Stack<>();
 
         // pushing elements onto the Stack
         stack.push(1);

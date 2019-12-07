@@ -34,7 +34,13 @@ Deque = Double ended Queue. Deque er et interface der extender Queue. Deque kan 
 **Map**:\
 Map er et interface hvor du kan mappe en key til en værdi. Et Map objekt kan ikke instantieres uden at 
 blive instantieret som fx TreeMap eller HashMap (da det er et interface). Map kan ikke indeholde duplicate keys, 
-men kan godt indeholde duplicate værdier.\
+men kan godt indeholde duplicate værdier. Det kan ikke indeholde null keys, men kan indeholde flere null værdier - 
+dette kan være brugbart hvis man ved hvad man skal bruge den specifikke key, men endnu ikke ved hvad den tilhørende 
+value skal være. 
+Alt efter implementeringen kan rækkefølgen og dermed sorteringen ikke garanteres at være i den naturlige rækkefølge. 
+Eksempelvis TreeMap sorterer keys'ne i den naturlige rækkefølge, hvorimod HashMap sorterer dem alt efter hvad Hash
+værdien er. Hvis man vil garantere rækkefølgen kan man implementere en Comparator som sorterer Map'et. HashMap 
+funktioner er *oftest* konstante O(1), men det kommer an på hvordan Hashingen er implementeret.\
 Hvad bruges det til?
 - Hvis vi vil gemme elementer som vi kan referere til via specifikke keys kan Map være idéelt. Et eksempel kunne være
 et navn som værdi og et ID som key. På denne måde kan alle medarbejdere have et unikt ID, men der kan godt være flere
