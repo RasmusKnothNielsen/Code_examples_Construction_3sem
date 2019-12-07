@@ -4,11 +4,6 @@ import java.util.Queue;
 public class QueueExample {
 
     public static void main(String[] args) {
-        QueueExample queueExample = new QueueExample();
-        queueExample.queue();
-    }
-
-    public Queue queue() {
 
         // Instantiating a Queue as a LinkedList
         Queue<Integer> q = new LinkedList<>();
@@ -48,6 +43,5 @@ public class QueueExample {
         //Prints the Queue
         System.out.println("List is now: \n" + q);
 
-        return q;
     }
 }

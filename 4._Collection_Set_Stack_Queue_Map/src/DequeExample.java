@@ -28,7 +28,7 @@ public class DequeExample {
 
         // Use the iterator method to iterate through the deque
         System.out.println("Standart Iterator:");
-        Iterator iterator =deque.iterator();
+        Iterator iterator = deque.iterator();
         while (iterator.hasNext()) {
             System.out.println("\t" + iterator.next());
         }
