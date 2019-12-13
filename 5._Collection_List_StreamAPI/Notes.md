@@ -27,6 +27,21 @@ along with following additional operations:
 
 ## Stream API
 
+Streams provide a clean an simple way to iterate over a collection.
+The advantage of using a stream instead of a for each loop or the like, is that it is faster.
+It does this by doing the intermediate operations in a lazy manner, until a terminate operation is called.
+When this terminate operation is called, we apply all the intermediate operations in chronological order,
+and only when we reach the end, we use the terminate operation.
+
+An example could be if we take an arraylist of booknames, we want to only display all the books that starts with a "K" 
+and ends with "e".
+See BooksExample in StreamAPI.
+With many filters (Analogues to if statements in for each loops), its easier to read the Stream than for each.
+It is also more computational efficient, than using for each loops.
+Is is more efficient, because we only call the terminate operation once, 
+and not every time we cycle through the for each loop.
+
+
 From Anders Github:
 
 Streams are:
@@ -38,9 +53,24 @@ Streams are:
 -   Parallelizable
 
 
+
 Intermediate operations
     intermediate operations return the stream itself
 map, filter, sorted
+
+    Filter method is an example of a lazy method.
+    Each intermediate operation (Filter) creates a new stream, 
+    stores the provided operation/function and return the new stream.
+    
+    The pipeline accumulates these newly created streams.
+    
+    The time when terminal operation is called, traversal of streams begins 
+    and the associated function is performed one by one.
+
+.
+```
+Map
+```
 
 Terminal Operations
         terminal operations return a result of a certain type
