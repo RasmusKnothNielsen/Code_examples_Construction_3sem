@@ -108,8 +108,8 @@ public class RasmusList<T> extends AbstractRasmusList {
 
     }
 
-    //public String toString() {
-    //    return Arrays.toString(list);
-    //}
+    public String toString() {
+        return Arrays.toString(list);
+    }
 }
 
