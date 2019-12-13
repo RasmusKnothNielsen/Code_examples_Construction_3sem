@@ -26,3 +26,25 @@ along with following additional operations:
 
 
 ## Stream API
+
+From Anders Github:
+
+Streams are:
+-   Not a data structure
+-   Designed for lambdas
+-   Do not support indexed access
+-   Can easily be outputted as arrays or lists
+-   Lazy access supported
+-   Parallelizable
+
+
+Intermediate operations
+    intermediate operations return the stream itself
+map, filter, sorted
+
+Terminal Operations
+        terminal operations return a result of a certain type
+collect, forEach, reduce, orElseThrow(NoSuchElementException::new)
+allMatch, anyMatch, noneMatch
+partitioningBy, groupingBy
+
