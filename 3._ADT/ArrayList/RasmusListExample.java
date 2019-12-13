@@ -12,7 +12,7 @@ public class RasmusListExample {
         stringArray.add("Thomas");
         stringArray.add("Knud");
 
-        System.out.println(stringArray);
+        System.out.println(stringArray + "\n");
 
         // Check if ArrayList is empty
         System.out.println("ArrayList is empty: " + stringArray.isEmpty());
@@ -20,7 +20,7 @@ public class RasmusListExample {
         // Clear the ArrayList
         System.out.println("Clearing the Array...");
         stringArray.clear();
-        System.out.println("Is ArrayList empty now: " + stringArray.isEmpty());
+        System.out.println("Is ArrayList empty now: " + stringArray.isEmpty() + "\n");
 
         // Add some elements to our ArrayList
         stringArray.add("Programming");
