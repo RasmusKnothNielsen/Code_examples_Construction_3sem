@@ -23,6 +23,12 @@ A list contains elements of the same type arranged in sequential order and follo
 -   isEmpty()
 -   isFull()
 
+### ArrayList
+
+We made an implementation of Arraylist, see it in the ArrayList folder.
+
+Remember that this implementation of the ADT ArrayList is implemented using Generics.
+
 
 ## Graph
 A graph is a data structure for storing connected data like a network of people on a social media platform.
@@ -41,4 +47,3 @@ For an example, see graph3.jpg
 
 
 ArrayList
-Graph
