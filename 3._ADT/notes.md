@@ -11,5 +11,34 @@ Think of ADT as a black box which hides the inner structure and design of the da
 
 Amongst others, we know of the List ADT, Stack ADT and Queue ADT.
 
+##List:
+A list contains elements of the same type arranged in sequential order and following operations can be performed on the list.
+
+-   get()
+-   insert()
+-   remove()
+-   removeAt()
+-   replace()
+-   size()
+-   isEmpty()
+-   isFull()
+
+
+## Graph
+A graph is a data structure for storing connected data like a network of people on a social media platform.
+
+A graph consists of vertices and edges. A vertex represents the entity (for example, people) 
+and an edge represents the relationship between entities (for example, a person's friendships).
+
+### Directed Graph
+
+If these edges feature a direction in them, the resulting graph is known as a directed graph.
+For an example, see graph2.jpg
+
+### Weighted Graph
+If these edges carry relative weight, this graph is known as a weighted graph.
+For an example, see graph3.jpg
+
+
 ArrayList
 Graph
