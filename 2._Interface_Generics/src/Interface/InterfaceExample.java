@@ -11,7 +11,7 @@ public class InterfaceExample {
         ImplementingFirst first = new ImplementingFirst();
         ImplementingBoth both = new ImplementingBoth();
 
-        // When a class implements an interface, it can be used to instance the interface
+        // When a class implements an interface, the interface can be used to refer to the object
         // This can practical in some uses. (See notes)
         FirstInterface firstInterface = new ImplementingFirst();
 
@@ -25,8 +25,7 @@ public class InterfaceExample {
         both.methodFromFirstInterface();
         both.methodFromSecondInterface();
 
-        //
-
+        // Calling the static method in FirstInterface
         FirstInterface.staticMethod(first);
         FirstInterface.staticMethod(both);
 
