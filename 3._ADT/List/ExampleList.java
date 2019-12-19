@@ -3,8 +3,11 @@ package List;
 import List.AbstractExampleList;
 
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-public class ExampleList<T> extends AbstractExampleList {
+public class ExampleList<T> extends AbstractExampleList implements Iterable{
 
     T type;
 
@@ -100,5 +103,28 @@ public class ExampleList<T> extends AbstractExampleList {
 
     public String toString() {
         return Arrays.toString(list);
+    }
+
+    public Iterator<T> iterator() {
+        return new ArrayListIterator();
+    }
+
+    // inner class
+    private class ArrayListIterator implements java.util.Iterator<T> {
+
+        private int current = 0;
+
+        public boolean hasNext() {
+            return current < size();
+        }
+
+        public T next() {
+            if (!hasNext()) throw new java.util.NoSuchElementException();
+            return list[current++];
+        }
+
+        public void remove() {
+            ExampleList.this.remove(--current); // reference the outer class
+        }
     }
 }
