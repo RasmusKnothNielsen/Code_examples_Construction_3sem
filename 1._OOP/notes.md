@@ -4,13 +4,13 @@
 Objekt orienteret programmering er et programmerings-paradigme hvor man benytter sig
 af de 4 nedenstående features. 
 
-Encapsulation
+####Encapsulation
 
-Inheritance
+####Inheritance
 
-Polymorphism
+####Polymorphism
 
-Abstraction
+####Abstraction
 
 ##Encapsulation (Indkapsling)
 * Hvorfor:
