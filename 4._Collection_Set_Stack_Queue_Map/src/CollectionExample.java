@@ -66,7 +66,7 @@ public class CollectionExample {
         }
         System.out.println();
 
-        // Iterating through the Collection with a forEach and lambda expression
+        // Iterating through the Collection with a forEach and a method reference
         integerCollection.forEach(System.out::println);
 
 

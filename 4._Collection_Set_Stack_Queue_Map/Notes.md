@@ -16,7 +16,7 @@ Hvad bruges det til?
 **Stack**:\
 Stack er en klasse der følger LIFO princippet, Last In First Out. Ved en Stack kan du kun kigge på det øverste element, 
 og ikke andre elementer i Stacken. Deque har samme funktionalitet, samt meget mere og kan stadig vedholde LIFO
-princippet - Deque er at foretrække af de to.
+princippet - Deque er at foretrække af de to.\
 `TODO:`Hvad bruges det til?
 
 **Queue**:\
@@ -43,5 +43,5 @@ værdien er. Hvis man vil garantere rækkefølgen kan man implementere en Compar
 funktioner er *oftest* konstante O(1), men det kommer an på hvordan Hashingen er implementeret.\
 Hvad bruges det til?
 - Hvis vi vil gemme elementer som vi kan referere til via specifikke keys kan Map være idéelt. Et eksempel kunne være
-et navn som værdi og et ID som key. På denne måde kan alle medarbejdere have et unikt ID, men der kan godt være flere
-med det samme navn.
+et fornavn samt efternavn som værdi og et medarbejderID eller brugernavn som key. På denne måde kan alle medarbejdere 
+have et unikt ID, men der kan godt være flere med det samme navn.
