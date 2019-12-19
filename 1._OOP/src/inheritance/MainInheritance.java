@@ -10,8 +10,6 @@ public class MainInheritance {
         System.out.println("superClass.methodOne()");
         superClass.methodOne();
 
-        System.out.println("\nsuperClass.methodTwo()");
-        superClass.methodTwo();
 
         System.out.println("\nsubClass.methodOne()");
         subClass.methodOne();
@@ -19,7 +17,5 @@ public class MainInheritance {
         System.out.println("\nsubClass.methodTwo()");
         subClass.methodTwo();
 
-        System.out.println("\nsubClass.methodThree()");
-        subClass.methodThree();
     }
 }
