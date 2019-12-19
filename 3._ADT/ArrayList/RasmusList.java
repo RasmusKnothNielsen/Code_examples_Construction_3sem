@@ -1,8 +1,9 @@
 package ArrayList;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
-public class RasmusList<T> extends AbstractRasmusList {
+public class RasmusList<T> extends AbstractRasmusList implements Iterable {
 
     T type;
 
@@ -26,7 +27,7 @@ public class RasmusList<T> extends AbstractRasmusList {
     }
 
     @Override
-    public RasmusList<T> remove(Object type) {
+    public RasmusList<T> removeAll(Object type) {
         RasmusList<T> list2 = new RasmusList<T>();
         for(int i=0;i<list.length;i++){
             if(!list[i].equals(type)){
@@ -106,6 +107,29 @@ public class RasmusList<T> extends AbstractRasmusList {
         }
         return newRasmusList;
 
+    }
+
+    public Iterator<T> iterator() {
+        return new ArrayListIterator();
+    }
+
+    // inner class
+    private class ArrayListIterator implements java.util.Iterator<T> {
+
+        private int current = 0;
+
+        public boolean hasNext() {
+            return current < size();
+        }
+
+        public T next() {
+            if (!hasNext()) throw new java.util.NoSuchElementException();
+            return list[current++];
+        }
+
+        public void remove() {
+            RasmusList.this.remove(--current); // reference the outer class
+        }
     }
 
     public String toString() {

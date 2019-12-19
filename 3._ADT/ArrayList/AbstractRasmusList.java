@@ -7,7 +7,7 @@ public abstract class AbstractRasmusList<T> {
 
     public abstract void set(int index, T element);
 
-    public abstract RasmusList<T> remove(T type);
+    public abstract RasmusList<T> removeAll(T type);
 
     public abstract void remove(int index);
 

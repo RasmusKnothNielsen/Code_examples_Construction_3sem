@@ -1,5 +1,7 @@
 package ArrayList;
 
+import java.util.Iterator;
+
 public class RasmusListExample {
 
     public static void main(String[] args) {
@@ -39,6 +41,18 @@ public class RasmusListExample {
 
         System.out.println("New String Array: " + newStringArray);
         System.out.println("Identity Hash Code: " + System.identityHashCode(newStringArray));
+
+        // Use the defined iterator from our ArrayList to iterate through the objects in the ArrayList
+        Iterator iterator = stringArray.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.println();
+
+        // Since our ArrayList implements Iterable, we can also do a For Each loop, more simple.
+        for (Object word : stringArray) {
+            System.out.println(word);
+        }
 
 
     }
