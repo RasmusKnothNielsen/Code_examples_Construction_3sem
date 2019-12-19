@@ -10,13 +10,14 @@ public class ThreadJoinAndThreadGroup {
         threadOne.start();
 
         // threadOne never stops and therefore threadTwo never starts
-        try { // TODO: Maybe demonstrate that the join starts after the previous thread
+        try {
             threadTwo.join(); // starts once the running Thread stops.
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        // |||||||| Thread Groups ||||||||
+
+/* TODO: Skal dette slettes?
 
         //instantiating new ThreadGroup
         ThreadGroup threadGroup = new ThreadGroup("Thread Group One: ");
@@ -27,11 +28,9 @@ public class ThreadJoinAndThreadGroup {
         t1.start();
         t2.start();
 
-        // stop all threads in threadGroup and destroy the threadGroup
-        System.out.println("Is threadGroup destroyed? " + threadGroup.isDestroyed());
-        threadGroup.destroy();
-        System.out.println("Destroying threadGroup");
-        System.out.println("Is threadGroup destroyed? " + threadGroup.isDestroyed());
+        // TODO: Do ThreadGroup stuff here
+
+ */
 
     }
 }

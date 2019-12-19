@@ -4,7 +4,7 @@ elementer. Collection er root interface i Collection hierarkiet. Alle interfaces
 eller implementerer sub-interfaces til Collection nedarver alle metoder fra Collection interfacet. Collection
 nedarver fra superinterfacet Iterable som er det "højeste" interface i interface hierarkiet.
 
-Alle Interfaces/klasse nedenfor nedarver alt funktionalitet fra Collection ved at enten extende eller implementerer 
+Alle Interfaces/klasser nedenfor nedarver alt funktionalitet fra Collection ved at enten extende eller implementerer 
 Collection eller sub-interfaces til Collection.
 
 **Set**:\
