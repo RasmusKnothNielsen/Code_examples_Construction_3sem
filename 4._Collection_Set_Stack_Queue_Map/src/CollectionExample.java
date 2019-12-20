@@ -15,6 +15,7 @@ public class CollectionExample {
         integerCollection.add(1);
         integerCollection.add(2);
         integerCollection.add(3);
+
         stringCollection.add("Niki");
         System.out.println("After adding elements, Collection consists of: " + integerCollection + "\n");
 
