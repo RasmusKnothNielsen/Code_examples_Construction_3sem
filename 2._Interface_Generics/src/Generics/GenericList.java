@@ -17,16 +17,18 @@ public class GenericList<T> implements Listlike<T> {
     @Override
     public void add(T t) {
         list = Arrays.copyOf(list, ++size); // Copying into new array 1 element longer
-        list[size-1] = t; // Setting the element at the last index
+        list[size - 1] = t; // Setting the element at the last index
     }
 
     @Override
     public void remove(int index) {
-        Objects.checkIndex(index,size); // Checking if index is valid
+        Objects.checkIndex(index, size); // Checking if index is valid
         size--; // Removing an element reduces the size
         if (size > index) { // If removed element is not the last
             // Move the remaining elements together, leaving the last index free
             System.arraycopy(list, index + 1, list, index, size - index);
+            //TODO - Also have loop-method
+            //TODO - JavaDoc
         }
         list = Arrays.copyOf(list, size); // Copying into new array 1 element shorter
     }

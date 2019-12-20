@@ -4,7 +4,7 @@ public class InterfaceExample {
 
     public static void main(String[] args) {
 
-        // Accessing the FirstInterface's variable
+        // Accessing the FirstInterface's variable (always static and final)
         System.out.println(FirstInterface.fieldString);
 
         // Instantiating the two classes implementing the first and both interfaces
@@ -14,6 +14,7 @@ public class InterfaceExample {
         // When a class implements an interface, the interface can be used to refer to the object
         // This can practical in some uses. (See notes)
         FirstInterface firstInterface = new ImplementingFirst();
+        FirstInterface bothInterface = new ImplementingBoth();
 
         // The ImplementingFirst class has access to methods from FirstInterface
         first.methodFromFirstInterface();
@@ -26,8 +27,10 @@ public class InterfaceExample {
         both.methodFromSecondInterface();
 
         // Calling the static method in FirstInterface
-        FirstInterface.staticMethod(first);
-        FirstInterface.staticMethod(both);
+        FirstInterface.staticMethod();
+
+        //TODO - Why doesn't this work?
+        //first.staticMethod();
 
         // When a method declared in an interface is given a "default" implementation,
         // the classes implementing the interface has that by default.

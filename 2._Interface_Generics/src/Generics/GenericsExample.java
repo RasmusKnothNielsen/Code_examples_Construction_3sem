@@ -29,7 +29,7 @@ public class GenericsExample {
         String string2 = gen.get(1);
         String string3 = gen.get(2);
 
-        // Now you can even use a foreach-loop to iterate
+        // Now you can even use a foreach-loop to iterate //TODO - on specific types
         for (String s : gen) {
             System.out.println(s);
         }

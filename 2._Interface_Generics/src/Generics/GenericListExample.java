@@ -6,11 +6,14 @@ public class GenericListExample {
 
     public static void main(String[] args) {
 
+        /*
         Listlike<String> g = new GenericList<>();
         String a = "A";
         String b = "B";
         String c = "C";
         String d = "D";
+
+         */
 
         // It doesn't matter what kind of objects are used. Because of Generics everything is supported.
         /*
@@ -21,17 +24,17 @@ public class GenericListExample {
         Integer d = 4;
         */
 
-        /*
-        Listlike<Map<String,Long>> g = new GenericList<>();
+
+        Listlike<Map<String,Integer>> g = new GenericList<>();
         Map<String, Integer> a = new HashMap<>();
-        Map<String, Integer> b = new TreeMap<>();
-        Map<String, Integer> c = new Hashtable<>();
-        Map<String, Integer> d = new WeakHashMap<>();
+        Map<String, Integer> b = new HashMap<>();
+        Map<String, Integer> c = new TreeMap<>();
+        Map<String, Integer> d = new TreeMap<>();
         a.put("A",1);
         b.put("B",2);
         c.put("C",3);
         d.put("D",4);
-         */
+
 
         System.out.println("\nIs list empty? " + g.isEmpty());
 
