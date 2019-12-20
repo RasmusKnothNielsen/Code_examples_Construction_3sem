@@ -26,7 +26,7 @@ public class StackExample {
         stack1.set(0, "Red Riding Hood");
         System.out.println(stack1);
 
-        // Add Strings to another LinkedList and add it to the first LinkedList
+        // Add Strings to another Stack and add it to the first Stack
         stack2.add("Yet Another");
         stack2.add("Fairy Tale");
         stack2.add("Is Upon Us");

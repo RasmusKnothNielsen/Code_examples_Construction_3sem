@@ -7,12 +7,12 @@ import java.util.stream.Collectors;
 
 public class IntStream {
 
-    static List<Integer> numbers = Arrays.asList(1,4,5,6,7,7,8,9,10,12,12);
+    static List<Integer> numbers = Arrays.asList(1,4,5,6,7,7,8,9,10,12,12,20);
 
     public static void main(String[] args) {
 
         // Print out each number
-        numbers.forEach(number -> System.out.println(number));
+        numbers.forEach(System.out::println);
 
         System.out.println("Squared list:");
         List<Integer> squaredNumbers = numbers.stream().map(number -> number*number).collect(Collectors.toList());

@@ -1,13 +1,13 @@
 package ArrayList;
 
 
-public abstract class AbstractRasmusList<T> {
+public interface AbstractRasmusList<T> {
 
     public abstract void add(T type);
 
     public abstract void set(int index, T element);
 
-    public abstract RasmusList<T> removeAll(T type);
+    public abstract void removeObjects(T type);
 
     public abstract void remove(int index);
 
