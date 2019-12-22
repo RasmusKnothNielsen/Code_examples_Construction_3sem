@@ -8,7 +8,7 @@ public class QueueExample {
         // Instantiating a Queue as a LinkedList
         Queue<Integer> q = new LinkedList<>();
 
-        // add elements to the queue
+        // add elements to the queue - throws exception if over capacity
         System.out.println("Adding 0, 1, 2, 3, 4 into the Queue");
         for (int i = 0; i < 5; i++) {
             q.add(i);
@@ -18,30 +18,28 @@ public class QueueExample {
         System.out.println("Printing the entire Queue:\n" + q);
         System.out.println();
 
-        //Remove the head of the queue
+        // Returns and remove the head of the queue
         System.out.println("Removing the head of the queue with the poll() method");
         q.poll();
 
         //Print all elements of the queue
         System.out.println(q + "\n");
 
-        //Printing the specific index using the LinkedList method indexOf();
-        System.out.println("Printing the element at index 3: \n" + ((LinkedList<Integer>) q).indexOf(3) + "\n");
-
-        //Removes a specific index using the LinkedList method remove();
-        ((LinkedList<Integer>) q).remove(3);
-        System.out.println("Printing the entire Queue: \n" + q + "\n");
+        // Throws exception if queue is empty
+        q.remove();
 
         //Retrieves the head of the queue without removing it
-        System.out.println("Head of the Queue is: \n" + q.element() + "\n");
+        System.out.println("Head of the Queue is: \n" + q.peek() + "\n");
 
+        // Throws exception if queue is empty
+        q.element();
 
         //Inserts an element if there is capacity for it and throws the element away if there is no capacity left.
         System.out.println("Adding an element (8) to the tail with the offer() method");
         q.offer(8);
 
         //Prints the Queue
-        System.out.println("List is now: \n" + q);
+        System.out.println("Queue is now: \n" + q);
 
     }
 }

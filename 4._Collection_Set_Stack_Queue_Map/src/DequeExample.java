@@ -12,7 +12,6 @@ public class DequeExample {
         Deque<String> deque = new LinkedList<>();
 
         // Add elements in different ways to the head or tail of the deque
-        deque.add("Element 1 (Added to tail)");     // This method comes from the Collection interface
         deque.addFirst("Element 2 (Added to head)");
         deque.addLast("Element 3 (Added to tail)");
         deque.push("Element 4 (Added to head)");
@@ -28,7 +27,7 @@ public class DequeExample {
 
         // Use the iterator method to iterate through the deque
         System.out.println("Standard Iterator:");
-        Iterator iterator = deque.iterator();
+        Iterator iterator = deque.iterator(); // could also use enhanced for loop / for each / lambda
         while (iterator.hasNext()) {
             System.out.println("\t" + iterator.next());
         }
