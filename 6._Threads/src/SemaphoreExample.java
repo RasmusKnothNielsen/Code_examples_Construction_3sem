@@ -75,6 +75,7 @@ public class SemaphoreExample extends Thread {
         }
     }
 
+
     public static void main(String[] args) throws InterruptedException {
 
         // Instantiating a Semaphore and setting the number of permits to 1
