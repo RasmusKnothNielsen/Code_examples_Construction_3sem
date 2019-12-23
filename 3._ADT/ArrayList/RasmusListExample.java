@@ -34,7 +34,7 @@ public class RasmusListExample {
         // Add some elements to our ArrayList
         stringArray.add("Programming");
         stringArray.add("is");
-        stringArray.add("excruciating");
+        stringArray.add("exciting");
 
         // Replace an index with another object
         stringArray.set(2, "fun");
