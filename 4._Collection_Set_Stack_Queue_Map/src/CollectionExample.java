@@ -15,6 +15,7 @@ public class CollectionExample {
         integerCollection.add(1);
         integerCollection.add(2);
         integerCollection.add(3);
+
         stringCollection.add("Niki");
         System.out.println("After adding elements, Collection consists of: " + integerCollection + "\n");
 
@@ -66,7 +67,7 @@ public class CollectionExample {
         }
         System.out.println();
 
-        // Iterating through the Collection with a forEach and lambda expression
+        // Iterating through the Collection with a forEach and a method reference
         integerCollection.forEach(System.out::println);
 
 
