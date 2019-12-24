@@ -7,8 +7,6 @@ nedarver fra superinterfacet Iterable som er det "højeste" interface i interfac
 Alle Interfaces/klasser nedenfor nedarver alt funktionalitet fra Collection ved at enten extende eller implementerer 
 Collection eller sub-interfaces til Collection.
 
-TODO: BILLEDE AF KLASSEDIAGRAM under ADT
-
 **Set**:\
 Set er en collection af elementer, hvoraf ingen duplicates er tilladte. Set extender Collection og er et interface.
 Dvs. at Set ikke kan instantieres uden at blive implementeret af en klasse.\
@@ -27,11 +25,11 @@ Hvad bruges det til?
 - Det kan fx bruges hvis du vil være helt sikker på at du følger FIFO princippet og kun vil indsætte data i den ene 
 ende af din queue og trække det ud i den anden ende af din queue.
 
-**Deque**:\
+**Deque** - Ikke nødvendigt at nævne Deque\
 Deque = Double ended Queue. Deque er et interface der extender Queue. Deque kan både følge princippet FIFO og LIFO. Med
  deque kan der tages elementer ud af begge ender og sættes ind i begge ender.
-`TODO:`Hvad bruges det til?
-- Hvis man har flere processorer som kører simultant......
+Hvad bruges det til?
+- Hvis man har flere processorer som kører simultant...... 
 
 **Map**:\
 Map er en del af Java Collections, men ikke en del af Collection interfacet.
