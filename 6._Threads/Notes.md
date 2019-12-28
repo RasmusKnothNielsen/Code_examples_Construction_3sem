@@ -44,18 +44,18 @@ Hvad bruges det til?
 **Concurrency**:\
 Concurrency indebærer det at kunne køre flere applikationer eller flere dele af en applikation simultant. I Java bliver
 dette muligt med threads, da det at køre flere threads "concurrently" / på samme tid er concurrency. Concurrency kan 
-både være multiproccessing og multithreading. 
-Hvad bruges det til?\
-Se Multiprocessing og multithreading
+både være multiproccessing og multithreading. \
+Hvad bruges det til?
+- Se Multiprocessing og multithreading
 
 **Deadlock**:\
 Deadlock er defineret ved at én eller flere threads venter på en anden thread og den thread aldrig bliver færdig.
 Når to eller flere threads forsøger at tilgå den samme ressource på samme tid opstår der en deadlock. Dvs. at hvis 
-ressourcen er optaget eller blokeret af én thread, er det ikke muligt for en anden thread at tilgå ressourcen, derfor 
+ressourcen er optaget eller blokeret af en thread, er det ikke muligt for en anden thread at tilgå ressourcen, derfor 
 er det vigtigt at hvis en lock er i brug og skal bruges senere er det vigtigt at den releases igen. Ellers er det netop 
-at Deadlock opstår.
+at Deadlock opstår.\
 Hvad bruges det til?
-Udviklere vil aldrig bevidst forsøge at opnå Deadlock, én af mange grunde er at det kan crashe applikationen i runtime.
+- Udviklere vil aldrig bevidst forsøge at opnå Deadlock, én af mange grunde er at det kan crashe applikationen i runtime.
 
 **Semaphore**:\
 Hvis udvikleren vil tildele én eller flere threads adgang til en vis ressource kan dette gøres med semaphore. Semaphore
@@ -63,9 +63,9 @@ fungerer næsten ligesom en synchronized lock. Før den givne thread kan tilgå 
 `semaphore.acquire()`. Når locken er acquired har threaden fuld tilgang til ressourcen, men andre threads kan først tilgå
 ressourcen når locken er blevet released igen `semaphore.acquire()`. Det antal af threads som kan tilgå den givne
 ressource bestemmes ved instantieringen af en semaphore `new Semaphore(1)`. Integeren i parameteren indikerer hvor mange
-threads der kan tilgå ressourcen.
-Hvad bruges det til?\
-Hvis udvikleren ønsker at et maks antal threads skal kunne tilgå en bestemt ressource, er Semaphore bestemt et godt valg.
+threads der kan tilgå ressourcen.\
+Hvad bruges det til?
+- Hvis udvikleren ønsker at et maks antal threads skal kunne tilgå en bestemt ressource, er Semaphore bestemt et godt valg.
 
 
 **Synchronized**:\
@@ -75,8 +75,8 @@ benytter man en "lock", denne lock skal være et objekt. Ved at benytte synchron
 tilgå ressourcen, dette implementeres ved at denne lock kommer i brug og bruges af den specifikke thread som tilgår den.
 For at denne lock kan bruges af andre Threads skal den releases igen, hvilket gøres når synchronized metoden er færdig.
 Man kan både bruge synchronized på en hel metode eller bruge den på en del af funktionaliteten i metoden.
-Hvad bruges det til?\
-Det bruges til at gøre en klasse Thread-safe så der ikke opstår en race condition. En race condition er når to threads
+Hvad bruges det til?
+- Det bruges til at gøre en klasse Thread-safe så der ikke opstår en race condition. En race condition er når to threads
 forsøger at tilgå den samme data og de "racer" om at tilgå/ændre dataen på samme tid. Hvis du ikke har håndteret din
 thread scheduling ordentligt kan det have uforudsigelige konsekvenser for din data. 
 Et eksempel vil være hvis du har en thread der tjekker at et tal i en udregning er 'X' og efterfølgende eksekverer 

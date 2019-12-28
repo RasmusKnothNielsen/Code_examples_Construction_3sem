@@ -1,20 +1,18 @@
 public class ThreadJoinAndThreadGroup {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
 
         // Instantiates ThreadExtendsThreads objects
         ThreadExtendsThread threadOne = new ThreadExtendsThread();
         ThreadExtendsThread threadTwo = new ThreadExtendsThread();
+        threadOne.setName("threadOne");
 
         // Starting thread
         threadOne.start();
+        threadOne.join(); // the next thread will not start before this thread stops
 
         // threadOne never stops and therefore threadTwo never starts
-        try {
-            threadTwo.join(); // starts once the running Thread stops.
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        threadTwo.start();
 
 
 /* TODO: Skal dette slettes?

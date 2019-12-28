@@ -1,4 +1,4 @@
-public class DeadLockAndSynchronizationMain {
+public class DeadLockAndSynchronization {
 
     public static void main(String[] args) {
 
@@ -14,6 +14,7 @@ public class DeadLockAndSynchronizationMain {
                     System.out.println("Thread 1 is using lock one");
 
                     try {
+                        // sleep() is called to make sure the example works - lockTwo will then be in use
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();

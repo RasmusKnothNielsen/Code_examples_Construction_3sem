@@ -1,3 +1,7 @@
+/*
+Concurrency - more than one thread runs at a time.
+ */
+
 public class Concurrency extends Thread {
 
 
@@ -26,8 +30,10 @@ public class Concurrency extends Thread {
         concurrency1.start();
         concurrency2.start();
 
-        // join() concurrency2 - concurrency3 waits for concurrency2 to finish before starting.
+        // join() concurrency2 and 1 - concurrency3 waits for the other threads to finish before starting.
+        concurrency1.join();
         concurrency2.join();
+
         concurrency3.start();
 
     }
