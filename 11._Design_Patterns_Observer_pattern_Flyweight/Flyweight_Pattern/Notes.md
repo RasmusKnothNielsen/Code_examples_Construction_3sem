@@ -22,7 +22,7 @@ Examples of Flyweight in core Java libraries:
     java.lang.Integer#valueOf(int) (also Boolean, Byte, Character, Short, Long and BigDecimal)
 
 ###Identification: 
-Flyweight can be recognized by a creation method that returns cached objects instead of creating new.
+Flyweight can be recognized by a creation method that returns cached objects instead of creating new ones.
 
 ###Example. 
 Trees in a forest
@@ -33,7 +33,7 @@ Ex: Name of tree type, color and texture.
 
 ###Extrinsic state:
 Fields that contain contextual data unique to each object
-Ex: Height, Width and age.
+Ex: X, Y and age.
 
 ###Applicability:
  Use the Flyweight pattern only when your program must support a huge number of objects 

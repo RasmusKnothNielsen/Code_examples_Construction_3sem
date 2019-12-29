@@ -1,30 +1,37 @@
 # The Plan
 
-- OOP
+1 - OOP
 Done
 
-- Interface + Generics
+2 - Interface + Generics
 Done
 
-- ADT: (For example our ArrayList) 
+3 - ADT: (For example our ArrayList) 
 Done
 
-- Collection: Set, Stack, Queue, Map
+4 - Collection: Set, Stack, Queue, Map
 Done 
 
-- Collection (List) + StreamAPI
+5 - Collection (List) + StreamAPI
 Done
 
-- Threads
+6 - Threads
+Done
 
-- TCP - UDP (Sockets)
+7 - TCP - UDP (Sockets)
 
-- Spring MVC - Web w. Thymeleaf
 
-- Spring Data JPA: Entity + MySQL (DDL)
+8 - Spring MVC - Web w. Thymeleaf
+Done
 
-- Spring Rest + Data JPA: CrudRepository (DML)
+9 - Spring Data JPA: Entity + MySQL (DDL)
 
-- Design Patterns: Observer pattern, Flyweight
+
+10 - Spring Rest + Data JPA: CrudRepository (DML)
+Done
+
+11 - Design Patterns: Observer pattern, Flyweight
+Done
  
-- Design Patterns: Singleton, Decorator
+12 - Design Patterns: Singleton, Decorator
+Done

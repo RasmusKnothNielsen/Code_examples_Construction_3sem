@@ -32,7 +32,7 @@ public class SingletonExample {
         System.out.println(enumSingleton2.getInfo()); //New enum info
 
 
-        /*
+
         //TODO - Slet dette når du har vist det til de andre?
         System.out.println("\nExample of how Reflection can break the ClassSingleton:");
         try {
@@ -46,7 +46,7 @@ public class SingletonExample {
 
         } catch (Exception ignored){}
 
-         */
+
     }
 
 }

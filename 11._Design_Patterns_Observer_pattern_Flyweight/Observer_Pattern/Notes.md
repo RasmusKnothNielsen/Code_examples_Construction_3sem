@@ -19,8 +19,11 @@ Here are some examples of the pattern in core Java libraries:
     javax.faces.event.PhaseListener
 
 ###Design Principle:
--   Loose Coupling.
+-   Low Coupling
 
 ###Identification: 
 The pattern can be recognized by subscription methods, 
 that store objects in a list and by calls to the update method issued to objects in that list.
+Furthermore there has to be an update method in the observer object.
+
+### Why is Observable/Observer deprecated:

@@ -1,6 +1,8 @@
 package Flyweight_Pattern.Trees;
 
+import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 // Used to demo the constructed code
 public class Demo {
@@ -13,13 +15,28 @@ public class Demo {
 
         Forest forest = new Forest();
 
-        for (int i = 0; i < Math.floor(TREES_TO_DRAW / TREE_TYPES); i++) {
+        // Exit program when windows is closed.
+        forest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            forest.plantTree(random(0, CANVAS_SIZE), (random(0, CANVAS_SIZE)),
-                    "Summer Oak", Color.GREEN, "Oak texture stub");
+        Random random = new Random();
 
-            forest.plantTree(random(0, CANVAS_SIZE), (random(0, CANVAS_SIZE)),
-                    "Autumn Oak", Color.ORANGE, "Autumn Oak texture stub");
+        for (int i = 0; i < TREES_TO_DRAW / TREE_TYPES; i++) {
+
+            forest.plantTree(
+                    random.nextInt(CANVAS_SIZE),
+                    random.nextInt(CANVAS_SIZE),
+                    "Summer Oak",
+                    Color.GREEN,
+                    "Oak texture stub"
+            );
+
+            forest.plantTree(
+                    random.nextInt(CANVAS_SIZE),
+                    random.nextInt(CANVAS_SIZE),
+                    "Autumn Oak",
+                    Color.ORANGE,
+                    "Autumn Oak texture stub"
+            );
         }
 
         forest.setSize(CANVAS_SIZE, CANVAS_SIZE);
@@ -35,9 +52,4 @@ public class Demo {
                 "MB (instead of " + ((TREES_TO_DRAW * 38) / 1024 / 1024) + "MB)");
 
     }
-
-    public static int random(int min, int max) {
-        return min + (int) (Math.random() * ((max - min) + 1 ));
-    }
-
 }

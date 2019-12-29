@@ -3,6 +3,7 @@ package Observer_Pattern.Build_From_Scratch;
 import java.util.ArrayList;
 import java.util.List;
 
+// Observable Object
 public class NewsPaper {
 
     private List<Customer> customers = new ArrayList<>();

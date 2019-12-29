@@ -1,5 +1,6 @@
 package Observer_Pattern.Build_From_Scratch;
 
+// Observer Object
 public class Customer {
 
     private String news;

@@ -36,7 +36,7 @@ public class Example {
         berlingske.setNews("Breaking News: Prins Joachim er med i Vild med Dans!");
 
         // Check if all other than customer4 has been updated
-        System.out.println("Here is the updated state of the customers after Customer 4 unsubscribed Berlingske :");
+        System.out.println("Here is the updated state of the customers after Customer 4 unsubscribed Berlingske:");
         System.out.println("Customer 1 : " + customer1.getNews());
         System.out.println("Customer 2 : " + customer2.getNews());
         System.out.println("Customer 3 : " + customer3.getNews());
