@@ -20,19 +20,21 @@ public class Demo {
 
         Random random = new Random();
 
+        // For loop that plants TREES_TO_DRAW trees
         for (int i = 0; i < TREES_TO_DRAW / TREE_TYPES; i++) {
 
+            // First type of trees that is going to be planted
             forest.plantTree(
-                    random.nextInt(CANVAS_SIZE),
-                    random.nextInt(CANVAS_SIZE),
+                    random.nextInt(CANVAS_SIZE),    // Where to plant on the X axis
+                    random.nextInt(CANVAS_SIZE),    // Where to plant on the Y axis
                     "Summer Oak",
                     Color.GREEN,
                     "Oak texture stub"
             );
 
             forest.plantTree(
-                    random.nextInt(CANVAS_SIZE),
-                    random.nextInt(CANVAS_SIZE),
+                    random.nextInt(CANVAS_SIZE),    // Where to plant on the X axis
+                    random.nextInt(CANVAS_SIZE),    // Where to plant on the Y axis
                     "Autumn Oak",
                     Color.ORANGE,
                     "Autumn Oak texture stub"

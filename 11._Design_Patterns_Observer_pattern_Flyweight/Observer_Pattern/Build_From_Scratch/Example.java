@@ -23,7 +23,7 @@ public class Example {
         berlingske.setNews("Breaking News: Berlingske understøtter nu Java!");
 
         // Check if the state in customer has been changed.
-        System.out.println("Here is the current state of the customers:");
+        System.out.println("\nHer ses de nuværende 'tilstande' i vores Customers:");
         System.out.println("Customer 1 : " + customer1.getNews());
         System.out.println("Customer 2 : " + customer2.getNews());
         System.out.println("Customer 3 : " + customer3.getNews());
@@ -36,7 +36,7 @@ public class Example {
         berlingske.setNews("Breaking News: Prins Joachim er med i Vild med Dans!");
 
         // Check if all other than customer4 has been updated
-        System.out.println("Here is the updated state of the customers after Customer 4 unsubscribed Berlingske:");
+        System.out.println("Her ses de opdaterede 'tilstande', efter Customer4 har opsagt sit abonnement:");
         System.out.println("Customer 1 : " + customer1.getNews());
         System.out.println("Customer 2 : " + customer2.getNews());
         System.out.println("Customer 3 : " + customer3.getNews());
@@ -52,15 +52,10 @@ public class Example {
         bt.setNews("Breaking News: Naboerne gik i chok, du gætter aldrig hvad der skete næst!");
 
         // Check if Customer 4 got the updated news from BT as the only one.
-        System.out.println("Here is the updated state of the customers after Customer 4 subscribed BT:");
+        System.out.println("Her ses de opdaterede 'tilstande' efter Customer4 har abonnemeret til BT:");
         System.out.println("Customer 1 : " + customer1.getNews());
         System.out.println("Customer 2 : " + customer2.getNews());
         System.out.println("Customer 3 : " + customer3.getNews());
-        System.out.println("Customer 4 : " + customer4.getNews() + "\n");
-
-
-
+        System.out.println("Customer 4 : " + customer4.getNews());
     }
-
-
 }

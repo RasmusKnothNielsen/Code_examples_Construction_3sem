@@ -27,3 +27,17 @@ that store objects in a list and by calls to the update method issued to objects
 Furthermore there has to be an update method in the observer object.
 
 ### Why is Observable/Observer deprecated:
+Observable/Observer has been deprecated since Java 9.
+
+- Not Serializable - Since, Observable doesn't implements Serializable. 
+So, you can't Serialize Observable neither its subclass.
+
+- No Thread Safety - The methods can be overridden by its subclasses, 
+and event notification can occur in different orders and possibly on different threads, 
+which is enough to disrupt any "thread safety".
+
+What are the alternatives? :
+
+- You can use PropertyChangeEvent and PropertyChangeListener from java.beans package.
+
+More reading here: https://www.baeldung.com/java-observer-pattern
