@@ -1,55 +1,33 @@
 package List;
 
-import java.util.Iterator;
 import java.util.Stack;
 
 public class StackExample {
 
     public static void main(String[] args) {
 
+        // Instantiating a Stack object
+        Stack<Integer> stack = new Stack<>();
 
-        Stack<String> stack1 = new Stack<>();
-        Stack<String> stack2 = new Stack<>();
+        // pushing elements onto the Stack
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
 
-        stack1.add("The Fox");
-        stack1.add("Jumps Over");
-        stack1.add("Lazy Dog");
-        System.out.println(stack1);
+        // peeking at the top element
+        System.out.println("Top element: " + stack.peek() + "\n");
 
-        stack1.add(2, "The");
-        System.out.println(stack1);
+        // Removes the top element of the Stack
+        stack.pop();
+        System.out.println("removed top element. Top element is now: " + stack.peek() + "\n");
 
-        // Get String at index 3
-        System.out.println(stack1.get(3));
+        // returns a boolean to see if the Stack is empty
+        System.out.println("Is the stack empty? " + stack.empty() + "\n");
 
-        // Replace String in index 0 with the provided
-        stack1.set(0, "Red Riding Hood");
-        System.out.println(stack1);
-
-        // Add Strings to another LinkedList and add it to the first LinkedList
-        stack2.add("Yet Another");
-        stack2.add("Fairy Tale");
-        stack2.add("Is Upon Us");
-        stack1.addAll(2, stack2);
-        System.out.println(stack1);
-
-        // Iterate through an LinkedList with for each
-        System.out.println("Iterate using for each: ");
-        for (String sentence : stack1) {
-            System.out.print(sentence + " ");
-        }
-        System.out.println();
-
-        // Iterate through using the built in Iterator
-        System.out.println("Iterate using Iterator: ");
-        Iterator iterator1 = stack1.iterator();
-        while (iterator1.hasNext()) {
-            System.out.print(iterator1.next() + " ");
-        }
-        System.out.println();
-
-        stack1.remove(2);
-        stack1.remove("Fairy Tale");
-        System.out.println(stack1);
+        // returns the 1-based position of the given element
+        System.out.println(stack.search(1) + "\n");
     }
+
+
 }

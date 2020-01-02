@@ -26,8 +26,11 @@ af de 4 nedenstående features.
   * Man kan redefinere metoder (overriding)
   
 ##Polymorphism (Polymorfi)
-
-
+Når et objekt har mere end 1 IS-A relationship så er der tale om polymorfi. Fx Goat klassen: \
+Goat IS-A Goat\
+Goat IS-A Animal\
+Ved polymorfi tillader du objekterne alt efter type at have forskellig implementering af den samme metode.
 
 ##Abstraction (Abstraktion)
-
+Abstraction er det at skjule selve implementeringen af en funktion. Dvs. at man i OOP beskriver navne på funktionaliteter
+på en sådan måde at man ved hvad funktionaliteten gør, men er ligeglad med hvordan den helt præcist gør det.

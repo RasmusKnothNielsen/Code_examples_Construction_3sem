@@ -11,7 +11,6 @@ public class RandomStream {
     public static void main(String[] args) {
 
         Random random = new Random();
-        Date date = new Date();
 
         // Continuous flow of random
         //random.ints().forEach(System.out::println);

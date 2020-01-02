@@ -5,6 +5,8 @@ How to use streams to filter out books that start with the letter "K"
 package StreamAPI;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class BooksExample {
 
@@ -38,24 +40,31 @@ public class BooksExample {
         // Use Stream to iterate through the ArrayList
         // book is a lambda expression, which relates to the current element.
         System.out.println("Iterating using Stream:");
-        books.stream().filter(book -> {
-            return book.startsWith("K");
-        }).filter(book -> {
-            return book.endsWith("e");
-        }).forEach(System.out::println);
 
+        books.stream()
+                .filter(book -> book.startsWith("K"))
+                .filter(book -> book.endsWith("e"))
+                .forEach(System.out::println);
         System.out.println();
 
         // We can also save the filtered stream directly to an ArrayList
         // by using a the method reference in our forEach operation.
         ArrayList<String> resultStream = new ArrayList<>();
+
         System.out.println("Iterating using Stream:");
-        books.stream().filter(book -> {
-            return book.startsWith("K");
-        }).filter(book -> {
-            return book.endsWith("e");
-        }).forEach(resultStream::add);
+        books.stream()
+                .filter(book -> book.startsWith("K"))
+                .filter(book -> book.endsWith("e"))
+                .forEach(resultStream::add);
+
         System.out.println(resultStream);
+
+
+        List<String> resultList = books.stream()
+                .filter(book -> book.startsWith("K"))
+                .collect(Collectors.toList());
+
+        System.out.println(resultList);
 
 
 

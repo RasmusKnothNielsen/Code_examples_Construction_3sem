@@ -13,6 +13,13 @@ public class RasmusListExample {
         stringArray.add("Niki");
         stringArray.add("Thomas");
         stringArray.add("Knud");
+        stringArray.add("Rasmus");
+
+        stringArray.removeObjects("Rasmus");
+        System.out.println(stringArray);
+
+
+        stringArray.remove(2);
 
         System.out.println(stringArray + "\n");
 
@@ -27,7 +34,7 @@ public class RasmusListExample {
         // Add some elements to our ArrayList
         stringArray.add("Programming");
         stringArray.add("is");
-        stringArray.add("excruciating");
+        stringArray.add("exciting");
 
         // Replace an index with another object
         stringArray.set(2, "fun");
@@ -50,10 +57,8 @@ public class RasmusListExample {
         System.out.println();
 
         // Since our ArrayList implements Iterable, we can also do a For Each loop, more simple.
-        for (Object word : stringArray) {
-            System.out.println(word);
+        for (Object object : stringArray) {
+            System.out.println(object);
         }
-
-
     }
 }

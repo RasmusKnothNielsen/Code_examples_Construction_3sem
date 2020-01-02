@@ -24,8 +24,8 @@ public class MapExample {
         // TreeMap entries is inserted in natural order - println to demonstrate
         System.out.println("TreeMap is in natural order: " + treeMapUsers + "\n");
 
-        // returns the entry that is higher than the given key (useful for e.g. salaries higher than)
-        System.out.println("Showing entries with keys > 3: " + treeMapUsers.tailMap(3, false) + "\n");
+        // returns the entry that is higher than the given key (Dictionary)
+        System.out.println("Showing entries with keys > 3: " + treeMapUsers.tailMap(3) + "\n");
 
         // returns the entry that is lower than the given key (useful for e.g. salaries lower than)
         System.out.println("Showing entries with keys <= 3: " + treeMapUsers.headMap(3, true) + "\n");
@@ -42,17 +42,17 @@ public class MapExample {
 
         // HashMap below:
         // instantiating a HashMap
-        HashMap<Integer, String> hashMapUsers = new HashMap<>();
+        HashMap<String, String> hashMapUsers = new HashMap<>();
 
         // Order is not guaranteed due to hashing the keys
-        hashMapUsers.put(10, null);
-        hashMapUsers.put(20, null); // infinite null values are allowed
+        hashMapUsers.put("A", null);
+        hashMapUsers.put("B", null); // infinite null values are allowed
         hashMapUsers.put(null, "Per"); // one null key is allowed
-        hashMapUsers.put(30, "Niki");
-        hashMapUsers.put(40, "Peter");
-        hashMapUsers.put(50, "Rasmus");
-        hashMapUsers.put(60, "Thomas");
-        hashMapUsers.put(70, "Knud");
+        hashMapUsers.put("C", "Niki");
+        hashMapUsers.put("D", "Peter");
+        hashMapUsers.put("E", "Rasmus");
+        hashMapUsers.put("F", "Thomas");
+        hashMapUsers.put("G", "Knud");
 
         // Printing all entries in the HashMap
         hashMapUsers.forEach((key, value) -> System.out.println("Key: " + key + ", Value: " + value));
