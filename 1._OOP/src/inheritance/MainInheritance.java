@@ -4,18 +4,27 @@ public class MainInheritance {
 
     public static void main(String[] args) {
 
-        SuperClass superClass = new SuperClass();
-        SubClass subClass = new SubClass();
+        Vehicle vehicle = new Vehicle();
+        Car car = new Car();
 
-        System.out.println("superClass.methodOne()");
-        superClass.methodOne();
+        System.out.print("\nStarting vehicle: ");
+        vehicle.start();
+
+        System.out.print("Stopping vehicle: ");
+        vehicle.stop();
 
 
-        System.out.println("\nsubClass.methodOne()");
-        subClass.methodOne();
+        // Overriding method in Vehicle
+        System.out.print("\nStarting car: ");
+        car.start();
 
-        System.out.println("\nsubClass.methodTwo()");
-        subClass.methodTwo();
+        // Inherited from Vehicle
+        System.out.print("Stopping car: ");
+        car.stop();
+
+        // New method
+        System.out.print("Opening window: ");
+        car.openWindow();
 
     }
 }
