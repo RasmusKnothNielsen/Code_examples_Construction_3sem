@@ -34,15 +34,12 @@ instans til at håndtere kommunikationen frem og tilbage.
 FOR:
 - Det er en nem måde at håndtere ting der skal være tilgængelige og 
 strømlinede globalt i programmet.
+- Det kan garanteres at der kun findes én instans - altså er værdier unikke.
 
 IMOD:
 - Singletons bliver ofte brugt som glorificerede globale variabler.
  Dette er skidt eftersom det skjuler dependencies i koden, i stedet for
  at fremhæve dem gennem interfaces.
-- Singletons bryder "Single Responsibility"-Princippet, der siger at
- hver klasse skal gøre én og kun én ting. 
- En Singleton har to ansvar - at styre antal instanser og at forsyne 
- andre klasser med informationer.
 - Singletons er skidt for memory management - hvis ingen bruger den,
  så forsvinder den ikke.
 - Singletons er persistente, hvilket besværliggør unit tests.

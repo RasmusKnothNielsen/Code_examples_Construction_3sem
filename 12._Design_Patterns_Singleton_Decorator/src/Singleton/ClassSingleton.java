@@ -12,7 +12,7 @@ public class ClassSingleton {
 
     // public static factory method to obtain the instance
     public static ClassSingleton getInstance() {
-        if (instance == null) { // Lazy loading. Instance is not created until it is needed.
+        if (instance == null) { // Lazy initialization. Instance is not created until it is needed.
             instance = new ClassSingleton();
         }
         return instance;

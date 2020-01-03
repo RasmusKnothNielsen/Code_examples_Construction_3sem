@@ -1,5 +1,7 @@
 package Singleton;
 
+//This solution is shown because it is inherently threadsafe
+
 // Enum-based implementation of the Singleton
 public enum EnumSingleton {
 

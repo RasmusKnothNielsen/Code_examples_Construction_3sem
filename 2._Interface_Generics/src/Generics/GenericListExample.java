@@ -24,9 +24,9 @@ public class GenericListExample {
         /*
         Listlike<Map<String,Long>> g = new GenericList<>();
         Map<String, Integer> a = new HashMap<>();
-        Map<String, Integer> b = new TreeMap<>();
-        Map<String, Integer> c = new Hashtable<>();
-        Map<String, Integer> d = new WeakHashMap<>();
+        Map<String, Integer> b = new HashMap<>();
+        Map<String, Integer> c = new TreeMap<>();
+        Map<String, Integer> d = new TreeMap<>();
         a.put("A",1);
         b.put("B",2);
         c.put("C",3);

@@ -31,22 +31,6 @@ public class SingletonExample {
         System.out.println(enumSingleton1.getInfo()); //New enum info
         System.out.println(enumSingleton2.getInfo()); //New enum info
 
-
-
-        //TODO - Slet dette når du har vist det til de andre?
-        System.out.println("\nExample of how Reflection can break the ClassSingleton:");
-        try {
-            Constructor constructor = classSingleton1.getClass().getDeclaredConstructor();
-            constructor.setAccessible(true);
-            ClassSingleton classSingleton = (ClassSingleton) constructor.newInstance();
-            classSingleton.setInfo("Oh no...");
-
-            System.out.println(classSingleton1.getInfo());
-            System.out.println(classSingleton.getInfo());
-
-        } catch (Exception ignored){}
-
-
     }
 
 }

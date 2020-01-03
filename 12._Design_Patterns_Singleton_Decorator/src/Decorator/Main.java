@@ -18,7 +18,7 @@ public class Main {
         // Having the choice of 2 types of dough, just 4 different toppings and a max of 5 toppings per pizza results in:
         // 2 * 4^5 = 2048 different pizzas.
 
-        // The SingletonExample advantage of using the decorator pattern over inheritance is that all combinations of decorations
+        // The advantage of using the decorator pattern over inheritance is that all combinations of decorations
         // are supported without needing a specific class for it.
         Pizza cheeseSplosion = new Cheese(new Cheese(new Cheese(new Cheese(new Cheese(new Cheese(new Cheese(new Cheese(new Cheese(new Cheese(new Cheese(new DeepPanPizza())))))))))));
         System.out.println("Ingredients: " + cheeseSplosion.getDescription());
