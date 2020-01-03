@@ -3,8 +3,11 @@ package List;
 import List.AbstractExampleList;
 
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-public class ExampleList<T> extends AbstractExampleList {
+public class ExampleList<T> extends AbstractExampleList<T> implements Iterable{
 
     T type;
 
@@ -12,7 +15,7 @@ public class ExampleList<T> extends AbstractExampleList {
 
 
     @Override
-    public void add(Object type) {
+    public void add(T type) {
         int currentLength = this.size();
         list = Arrays.copyOf(list, currentLength+1);
         try {
@@ -23,12 +26,12 @@ public class ExampleList<T> extends AbstractExampleList {
     }
 
     @Override
-    public void set(int index, Object element) {
-        list[index] = (T) element;
+    public void set(int index, T element) {
+        list[index] = element;
     }
 
     @Override
-    public ExampleList<T> remove(Object type) {
+    public ExampleList<T> remove(T type) {
         ExampleList<T> list2 = new ExampleList<>();
         for(int i=0;i<list.length;i++){
             if(!list[i].equals(type)){
@@ -39,6 +42,7 @@ public class ExampleList<T> extends AbstractExampleList {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void remove(int index) {
         if (index >= list.length) {
             System.out.println("Index out of bound");
@@ -61,7 +65,7 @@ public class ExampleList<T> extends AbstractExampleList {
     }
 
     @Override
-    public boolean contains(Object type) {
+    public boolean contains(T type) {
         for (int i = 0; i < list.length; i++) {
             if (list[i].equals(type)) {
                 return true;
@@ -72,7 +76,7 @@ public class ExampleList<T> extends AbstractExampleList {
     }
 
     @Override
-    public int indexOf(Object type) {
+    public int indexOf(T type) {
         int index = -1;
         for(int i=0;i<list.length;i++){
             if(list[i].equals(type)){
@@ -83,6 +87,7 @@ public class ExampleList<T> extends AbstractExampleList {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void clear() {
         list = (T[]) new Object[0];
     }
@@ -100,5 +105,24 @@ public class ExampleList<T> extends AbstractExampleList {
 
     public String toString() {
         return Arrays.toString(list);
+    }
+
+    public Iterator<T> iterator() {
+        return new ArrayListIterator();
+    }
+
+    // inner class
+    private class ArrayListIterator implements java.util.Iterator<T> {
+
+        private int current = 0;
+
+        public boolean hasNext() {
+            return current < size();
+        }
+
+        public T next() {
+            if (!hasNext()) throw new java.util.NoSuchElementException();
+            return list[current++];
+        }
     }
 }
