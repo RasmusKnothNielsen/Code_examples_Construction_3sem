@@ -31,18 +31,5 @@ public class Course {
     @Transient
     File file;
 
-    /*
-    @NotNull
-    @NotEmpty
-    @Size(min=5, max=20)
-    @Past
-    @Future
-    @FutureOrPresent
-    @Min(5)
-    @Max(10)
-    @Positive
-    @NegativeOrZero
-    @Email
-    @CreditCardNumber
-     */
+
 }
