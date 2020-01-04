@@ -1,4 +1,4 @@
-package List;
+package Interface;
 
 public class Main {
 

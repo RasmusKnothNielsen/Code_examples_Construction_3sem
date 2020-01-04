@@ -1,11 +1,7 @@
-package List;
-
-import List.AbstractExampleList;
+package Interface;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
 
 public class ExampleList<T> extends AbstractExampleList<T> implements Iterable{
 

@@ -1,4 +1,4 @@
-# Difference between Java's ArrayList and my ArrayList:
+# Difference between Java's Abstract and my Abstract:
 
 No:
 - Sort

@@ -1,4 +1,4 @@
-package ArrayList;
+package Abstract;
 
 
 public interface AbstractRasmusList<T> {

@@ -1,4 +1,4 @@
-package List;
+package Interface;
 
 public abstract class AbstractExampleList<T> {
 
