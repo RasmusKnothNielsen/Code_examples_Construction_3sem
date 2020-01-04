@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.net.*;
 import java.util.Scanner;
 
-public class UDP_11
+public class UDPClient
 {
     public static void main(String[] args) throws Exception
     {
@@ -22,7 +22,7 @@ public class UDP_11
 
         while (true)
         {
-            System.out.println("Please type you message: ");
+            System.out.println("Please type your message: ");
             sendMessage = inFromUser.readLine();
             sendData= sendMessage.getBytes();
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 6701);
@@ -32,7 +32,7 @@ public class UDP_11
 
             socket.receive(receivePacket);
             receiveMessage = new String(receivePacket.getData(),0,receivePacket.getLength());
-            System.out.println("Message received:" + receiveMessage);
+            System.out.println("Message received: " + receiveMessage);
             if(receiveMessage.startsWith("QUIT"))
               break;
         }
