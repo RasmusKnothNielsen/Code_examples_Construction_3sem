@@ -44,6 +44,7 @@ public class Demo {
         forest.setSize(CANVAS_SIZE, CANVAS_SIZE);
         forest.setVisible(true);
 
+        /*
         System.out.println(TREES_TO_DRAW + " trees drawn");
         System.out.println("----------------------");
         System.out.println("Memory Usage:");
@@ -52,6 +53,6 @@ public class Demo {
         System.out.println("----------------------");
         System.out.println("Total: " + ((TREES_TO_DRAW * 8 + TREE_TYPES * 30) / 1024 / 1024) +
                 "MB (instead of " + ((TREES_TO_DRAW * 38) / 1024 / 1024) + "MB)");
-
+         */
     }
 }

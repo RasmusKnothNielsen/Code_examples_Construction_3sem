@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.io.File;
 import java.util.List;
 
 @Data
@@ -20,29 +21,15 @@ public class Course {
     Long id;
 
     @NotBlank
+    @Column(name = "course_description")
     String description;
 
     @JsonIgnore
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
     List<Student> studentList;
 
-    /*
-    @Column(name = "column_name")
-    @Enumerated(EnumType.STRING)
-    @Enumerated(EnumType.ORDINAL)
     @Transient
+    File file;
 
-    @NotNull
-    @NotEmpty
-    @Size(min=5, max=20)
-    @Past
-    @Future
-    @FutureOrPresent
-    @Min(5)
-    @Max(10)
-    @Positive
-    @NegativeOrZero
-    @Email
-    @CreditCardNumber
-     */
+
 }
