@@ -26,8 +26,7 @@ public class InterfaceExample {
         both.methodFromSecondInterface();
 
         // Calling the static method in FirstInterface
-        FirstInterface.staticMethod(first);
-        FirstInterface.staticMethod(both);
+        FirstInterface.staticMethod();
 
         // When a method declared in an interface is given a "default" implementation,
         // the classes implementing the interface has that by default.

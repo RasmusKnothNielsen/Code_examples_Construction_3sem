@@ -10,8 +10,8 @@ public interface FirstInterface {
     void methodFromFirstInterface();
 
     // Static methods must be implemented
-    static void staticMethod(FirstInterface f) {
-        System.out.println(f.getClass());
+    static void staticMethod() {
+        System.out.println("Static method from FirstInterface");
     }
 
     // Using the "default" keyword, methods can be implemented.
