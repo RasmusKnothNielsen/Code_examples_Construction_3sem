@@ -1,14 +1,18 @@
 package polymorphism;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PolymorphismMain {
 
     public static void main(String[] args) {
 
-        Animal firstAnimal = new Animal();
-        Animal secondAnimal = new Goat();
+        List<Animal> animalList = new ArrayList<>();
 
-        firstAnimal.makeSound();
-        secondAnimal.makeSound();
+        animalList.add(new Animal());
+        animalList.add(new Goat());
+
+        animalList.forEach(Animal::makeSound);
     }
 
 }
