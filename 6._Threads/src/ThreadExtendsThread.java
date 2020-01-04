@@ -1,18 +1,8 @@
-package src;
 
-public class ThreadExtendsThread extends Thread {
+// Implements Runnable
+public class ThreadExtendsThread implements Runnable {
 
-    // Empty constructor
-    public ThreadExtendsThread() {
-
-    }
-    // TODO: Is this necessary? Delete everything with ThreadGroups?
-    // Constructor containing a ThreadGroup and a String for the threads name as parameter
-    public ThreadExtendsThread(ThreadGroup threadGroup, String threadName) {
-        super(threadGroup, threadName);
-    }
-
-    // create run() method so that the extended Thread class knows it's a Thread
+    // Implementing the run() method
     public void run() {
         while (true) {
             // print the thread name and time
