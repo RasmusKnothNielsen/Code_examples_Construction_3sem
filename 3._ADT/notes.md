@@ -9,9 +9,9 @@ The process of providing only the essentials and hiding the details is known as 
 
 Think of ADT as a black box which hides the inner structure and design of the data type.
 
-Amongst others, we know of the List ADT, Stack ADT and Queue ADT.
+Amongst others, we know of the Interface ADT, Stack ADT and Queue ADT.
 
-##List:
+##Interface:
 A list contains elements of the same type arranged in sequential order and following operations can be performed on the list.
 
 -   get()
@@ -23,11 +23,11 @@ A list contains elements of the same type arranged in sequential order and follo
 -   isEmpty()
 -   isFull()
 
-### ArrayList
+### Abstract
 
-We made an implementation of Arraylist, see it in the ArrayList folder.
+We made an implementation of Arraylist, see it in the Abstract folder.
 
-Remember that this implementation of the ADT ArrayList is implemented using Generics.
+Remember that this implementation of the ADT Abstract is implemented using Generics.
 
 
 ## Graph
@@ -46,4 +46,4 @@ If these edges carry relative weight, this graph is known as a weighted graph.
 For an example, see graph3.jpg
 
 
-ArrayList
+Abstract

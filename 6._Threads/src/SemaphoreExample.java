@@ -1,11 +1,12 @@
-package src;
-
 import java.util.concurrent.Semaphore;
 
+// Extends Thread
 public class SemaphoreExample extends Thread {
 
     Semaphore sem;
     String threadName;
+
+    int sharedCount;
 
     public SemaphoreExample(Semaphore sem, String threadName) {
         super(threadName);
@@ -31,8 +32,8 @@ public class SemaphoreExample extends Thread {
                 // Now, accessing the shared resource.
                 // other waiting threads will wait, until this thread release the lock
                 for (int i = 0; i < 5; i++) {
-                    SharedCount.count++;
-                    System.out.println(threadName + ": " + SharedCount.count);
+                    sharedCount++;
+                    System.out.println(threadName + ": " + sharedCount);
 
                     // Now, allowing a context switch if possible for thread Two to execute
                     Thread.sleep(100);
@@ -62,8 +63,8 @@ public class SemaphoreExample extends Thread {
                 // other waiting threads will wait, until this
                 // thread release the lock
                 for (int i = 0; i < 5; i++) {
-                    SharedCount.count--;
-                    System.out.println(threadName + ": " + SharedCount.count);
+                    sharedCount--;
+                    System.out.println(threadName + ": " + sharedCount);
 
                     // Now, allowing a context switch if possible for thread One to execute
                     Thread.sleep(100);
