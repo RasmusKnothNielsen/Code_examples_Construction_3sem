@@ -32,6 +32,8 @@ public class Example {
         System.out.println("\n" + customer1.getNews(berlingske));
         System.out.println(customer1.getNews(bt));
 
+        bt.setNews("Breaking");
+
 
     }
 

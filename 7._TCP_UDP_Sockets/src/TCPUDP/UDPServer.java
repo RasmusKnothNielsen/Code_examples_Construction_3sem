@@ -22,7 +22,7 @@ public class UDPServer
         while (true)
         {
             socket.receive(receivePacket);
-            receiveMessage = new String(receivePacket.getData(),0,receivePacket.getLength());
+            receiveMessage = new String(receivePacket.getData(),0,receivePacket.getLength()); //Byte Array, to String.
             System.out.println("Message received: " + receiveMessage);
             if(receiveMessage.startsWith("QUIT"))
               break;

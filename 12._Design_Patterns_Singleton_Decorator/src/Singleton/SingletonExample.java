@@ -1,7 +1,5 @@
 package Singleton;
 
-import java.lang.reflect.Constructor;
-
 public class SingletonExample {
 
     public static void main(String[] args) {

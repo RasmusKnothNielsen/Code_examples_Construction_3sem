@@ -8,16 +8,16 @@ import javax.validation.constraints.NotBlank;
 import java.io.File;
 import java.util.List;
 
-@Data
-@Entity
-@Table(name = "courses")
+@Data       // Lombok
+@Entity     // JPA
+@Table(name = "courses")    // JPA
 public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)     // Lad JPA bestemme (SEQUENCE)
-    //@GeneratedValue(strategy = GenerationType.IDENTITY) // Brug tabellens interne auto-increment værdi
+    //@GeneratedValue(strategy = GenerationType.IDENTITY) // Brug tabellens interne auto-increment værdi, række skal først laves.
     //@GeneratedValue(strategy = GenerationType.SEQUENCE) // Brug en 'sequence' tabel (MySQL har ikke sequence. så den bruger TABLE i stedet)
-    //@GeneratedValue(strategy = GenerationType.TABLE)    // Opret tabel med numre
+    //@GeneratedValue(strategy = GenerationType.TABLE)    // Opret tabel med numre, langsomst
     Long id;
 
     @NotBlank
@@ -25,10 +25,10 @@ public class Course {
     String description;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
-    List<Student> studentList;
+    @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)     // mappedBy henviser til field i Student
+    List<Student> studentList;                                  // LAZY gør at studentList først hentes når den skal bruges
 
-    @Transient
+    @Transient  // Bruges ved åbne filer, eller ting som ikke kan genskabes på andre systemer.
     File file;
 
 

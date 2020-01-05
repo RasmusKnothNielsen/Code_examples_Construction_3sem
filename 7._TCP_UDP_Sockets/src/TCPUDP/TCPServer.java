@@ -16,7 +16,7 @@ public class TCPServer
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("waiting for a connection");
-        Socket connectionSocket = welcomeSocket.accept();
+        Socket connectionSocket = welcomeSocket.accept();   // Waits until a connection is wanted.
         BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
         DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
 
