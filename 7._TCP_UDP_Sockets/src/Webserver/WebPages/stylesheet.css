@@ -1,0 +1,12 @@
+html,
+body {
+    background-color: white;
+    font-family: arial, verdana, tahoma, sans-serif;
+    color: black;
+    text-align: center;
+    height: 100%;
+}
+
+div.center {
+    text-align: center;
+}
