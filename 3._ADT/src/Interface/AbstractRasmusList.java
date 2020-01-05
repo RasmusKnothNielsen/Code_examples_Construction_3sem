@@ -1,12 +1,12 @@
-package List;
+package Interface;
 
-public abstract class AbstractExampleList<T> {
+public interface AbstractRasmusList<T> {
 
     public abstract void add(T type);
 
     public abstract void set(int index, T element);
 
-    public abstract ExampleList<T> remove(T type);
+    public abstract void removeObjects(T type);
 
     public abstract void remove(int index);
 
@@ -21,5 +21,7 @@ public abstract class AbstractExampleList<T> {
     public abstract boolean isEmpty();
 
     public abstract int size();
+
+    public abstract AbstractRasmusList<T> clone();
 
 }

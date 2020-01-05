@@ -6,7 +6,7 @@ import java.util.Deque;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class DequeExample {
+public class DequeExample1 {
 
     public static void main(String[] args) {
 

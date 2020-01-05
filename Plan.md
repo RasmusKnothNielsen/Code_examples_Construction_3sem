@@ -6,7 +6,7 @@ Done
 2 - Interface + Generics
 Done
 
-3 - ADT: (For example our ArrayList) 
+3 - ADT: (For example our Interface) 
 Done
 
 4 - Collection: Set, Stack, Queue, Map

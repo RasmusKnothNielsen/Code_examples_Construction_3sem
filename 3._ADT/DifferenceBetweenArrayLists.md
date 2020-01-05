@@ -1,4 +1,4 @@
-# Difference between Java's ArrayList and my ArrayList:
+# Difference between Java's Interface and my Interface:
 
 No:
 - Sort

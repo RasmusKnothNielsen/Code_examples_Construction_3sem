@@ -5,7 +5,7 @@ Software Construction, 3. semester, Data Science, KEA.
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class QueueExample {
+public class QueueExample1 {
 
     public static void main(String[] args) {
 

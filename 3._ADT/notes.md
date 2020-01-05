@@ -23,11 +23,11 @@ A list contains elements of the same type arranged in sequential order and follo
 -   isEmpty()
 -   isFull()
 
-### ArrayList
+### Interface
 
-We made an implementation of Arraylist, see it in the ArrayList folder.
+We made an implementation of Arraylist, see it in the Interface folder.
 
-Remember that this implementation of the ADT ArrayList is implemented using Generics.
+Remember that this implementation of the ADT Interface is implemented using Generics.
 
 
 ## Graph
@@ -46,4 +46,4 @@ If these edges carry relative weight, this graph is known as a weighted graph.
 For an example, see graph3.jpg
 
 
-ArrayList
+Interface

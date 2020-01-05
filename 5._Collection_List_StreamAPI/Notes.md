@@ -8,7 +8,7 @@ It is an ordered collection of objects in which duplicate values can be stored.
 Since List preserves the insertion order, it allows positional access and insertion of elements. 
 
 List Interface is implemented by the classes of 
--   ArrayList 
+-   Interface 
 -   LinkedList 
 -   Vector 
 -   Stack.

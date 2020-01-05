@@ -1,5 +1,3 @@
-package src;
-
 import java.util.concurrent.Semaphore;
 
 public class SemaphoreExample extends Thread {

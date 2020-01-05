@@ -1,5 +1,3 @@
-package src;
-
 public class ThreadExtendsThread extends Thread {
 
     // Empty constructor
