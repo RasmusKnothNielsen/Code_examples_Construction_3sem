@@ -6,6 +6,7 @@ import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.File;
+import java.net.Socket;
 import java.util.List;
 
 @Data
@@ -29,7 +30,5 @@ public class Course {
     List<Student> studentList;
 
     @Transient
-    File file;
-
-
+    Socket socket;
 }
