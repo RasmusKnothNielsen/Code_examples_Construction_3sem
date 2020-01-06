@@ -8,6 +8,11 @@ public class NewsPaper {
 
     private List<Customer> customers = new ArrayList<>();
     private String news;
+    private String name;
+
+    public NewsPaper(String name) {
+        this.name = name;
+    }
 
     public String getNews() {
         return news;
@@ -36,4 +41,8 @@ public class NewsPaper {
         }
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
 }

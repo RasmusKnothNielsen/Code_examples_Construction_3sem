@@ -159,8 +159,7 @@ public class UDPServer
             {
                 Client client = createClientObjectFromPacket(receivePacket);
                 String availableCommands = "On this chat server, you can use the following commands:\n" +
-                        "'JOIN: (username)'\t\t\t Up to 20 characters are supported.\n" +
-                        "'MESSAGE: (message)'\t\t Up to 200 characters are supported. \n" +
+                        "'(message)'\t\t Up to 200 characters are supported. \n" +
                         "'WHOISONLINE' \n" +
                         "'COMMANDS' \n" +
                         "'QUIT'";

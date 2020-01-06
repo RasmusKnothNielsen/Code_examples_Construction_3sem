@@ -3,6 +3,7 @@ package TCPUDP;
 import java.io.*;
 import java.net.*;
 
+// Transmission Control Protocol
 public class TCPServer
 {
     public static void main(String args[]) throws Exception
@@ -11,6 +12,7 @@ public class TCPServer
         String sentence;
         String userText;
 
+        // Set to listen on port 5656
         ServerSocket welcomeSocket = new ServerSocket(5656);
         System.out.println("we have a socket");
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));

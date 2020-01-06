@@ -3,6 +3,7 @@ package TCPUDP;
 import java.io.*;
 import java.net.*;
 
+// User Datagram Protocol
 public class UDPServer
 {
     public static void main(String[] args) throws Exception
@@ -13,6 +14,7 @@ public class UDPServer
 
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 
+        // Set to listen on port 6701
         DatagramSocket socket = new DatagramSocket(6701);
 
         InetAddress IPAddress = InetAddress.getByName("127.0.0.1");
@@ -30,7 +32,7 @@ public class UDPServer
             System.out.println("Please type your message: ");
             sendMessage = inFromUser.readLine();
             sendData = sendMessage.getBytes();
-            DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, 6710);
+            DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, receivePacket.getAddress(), receivePacket.getPort());
             socket.send(sendPacket);
             if(sendMessage.startsWith("QUIT"))
               break;
