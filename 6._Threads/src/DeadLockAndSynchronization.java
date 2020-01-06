@@ -1,5 +1,3 @@
-package src;
-
 public class DeadLockAndSynchronization {
 
     public static void main(String[] args) {
