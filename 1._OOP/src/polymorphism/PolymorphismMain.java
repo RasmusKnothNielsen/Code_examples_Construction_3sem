@@ -11,6 +11,7 @@ public class PolymorphismMain {
 
         animalList.add(new Animal());
         animalList.add(new Goat());
+        animalList.add(new Duck());
 
         animalList.forEach(Animal::makeSound);
     }

@@ -9,10 +9,6 @@ Read Network_Assignment2.pdf for more information
 
 package Chat;
 
-/* TODO User should be prompted for his/hers username instead of using JOIN:
-Furthermore, no need for MESSAGE: since every message after ones name, is a message.
- */
-
 import java.net.InetAddress;
 import java.util.Scanner;
 
@@ -38,14 +34,6 @@ public class UDPClient
         ReceiverThread receiverThread = new ReceiverThread(senderThread.getSocket());
         receiverThread.start();
 
-/*
-        System.out.println("\nIf you have provided the right credentials, " +
-                "you can how send messages to a chat server located at: \n"
-                + "Host: " + host + ", Port: " + serverPort + "\n");
-
-        System.out.println("If it is supported by the server, type COMMANDS to get a list of commands");
-
- */
 
     }
 
