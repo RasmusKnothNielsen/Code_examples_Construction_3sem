@@ -67,7 +67,7 @@ public class HTTPserverTCP implements Runnable {
 
             // If the client sends any other request than a GET request
             if (!method.equals("GET")) {
-                // we return the 400 error page, since it means that the request is not supported by server
+                // we return the 501 error page, since it means that the request is not supported by server
                 File file = new File(PATH, METHOD_NOT_SUPPORTED);
                 int fileLength = (int) file.length();   // Cast the length to an int
                 byte[] fileData = readFileData(file, fileLength);
@@ -168,6 +168,8 @@ public class HTTPserverTCP implements Runnable {
             return "application/msword";
         } else if (fileRequested.endsWith(".zip")) {
             return "application/zip";
+        } else if (fileRequested.endsWith(".css")) {
+            return "text/css";
         } else {
             return "text/plain";
         }

@@ -1,12 +1,18 @@
-html,
 body {
-    background-color: white;
-    font-family: arial, verdana, tahoma, sans-serif;
-    color: black;
-    text-align: center;
-    height: 100%;
+    background-color: powderblue;
+}
+h1 {
+    color: blue;
+}
+p {
+    color: red;
 }
 
-div.center {
+.wrapper {
     text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
 }
