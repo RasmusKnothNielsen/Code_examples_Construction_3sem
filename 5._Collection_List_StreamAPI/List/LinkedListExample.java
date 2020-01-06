@@ -1,4 +1,4 @@
-package Interface;
+package List;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -30,14 +30,14 @@ public class LinkedListExample {
         linkedList2.add("Fairy Tale");
         linkedList2.add("Is Upon Us");
         linkedList1.addAll(2, linkedList2);
-        System.out.println(linkedList1);
+        System.out.println(linkedList1 + "\n");
 
         // Iterate through an LinkedList with for each
-        System.out.println("Iterate using for each: ");
+        System.out.println("Iterate using enhanced for loop: ");
         for (String sentence : linkedList1) {
             System.out.print(sentence + " ");
         }
-        System.out.println();
+        System.out.println("\n");
 
         // Iterate through using the built in Iterator
         System.out.println("Iterate using Iterator: ");
@@ -45,8 +45,12 @@ public class LinkedListExample {
         while(iterator1.hasNext()) {
             System.out.print(iterator1.next() + " ");
         }
+        System.out.println("\n");
 
+        // Iterate through using forEach and Lambda
+        System.out.println("Iterate using forEach and Lambda: ");
+        linkedList1.stream().forEach(S -> System.out.print(S + " "));
+        System.out.println();
     }
-
 }
 

@@ -1,4 +1,4 @@
-package Interface;
+package List;
 
 import java.util.Stack;
 
@@ -16,7 +16,7 @@ public class StackExample {
         stack.push(4);
 
         // peeking at the top element
-        System.out.println("Top element: " + stack.peek() + "\n");
+        System.out.println("\nTop element: " + stack.peek() + "\n");
 
         // Removes the top element of the Stack
         stack.pop();

@@ -17,7 +17,7 @@ public class RandomStream {
 
         // Limited number of random
         System.out.println("Stream:");
-        random.ints().limit(100).forEach(System.out::println);
+        random.ints().limit(10).forEach(System.out::println);
 
 
 
