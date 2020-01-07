@@ -18,9 +18,9 @@ public class Concurrency extends Thread {
         Concurrency concurrency3 = new Concurrency();
 
         // Priority can be set in case ressources are limited.
-        //concurrency1.setPriority(MIN_PRIORITY);
-        //concurrency2.setPriority(MIN_PRIORITY);
-        //concurrency3.setPriority(MAX_PRIORITY);
+        concurrency1.setPriority(MIN_PRIORITY);
+        concurrency2.setPriority(MIN_PRIORITY);
+        concurrency3.setPriority(MAX_PRIORITY);
 
         // Set name of the threads
         concurrency1.setName("Thread One");

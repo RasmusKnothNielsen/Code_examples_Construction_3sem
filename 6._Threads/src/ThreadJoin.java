@@ -14,7 +14,7 @@ public class ThreadJoin {
 
         // Starting thread
         threadOne.start();
-        threadOne.join(); // the next thread will not start before this thread stops
+        //threadOne.join(); // the next thread will not start before this thread stops
 
         // threadOne never stops and therefore threadTwo never starts
         threadTwo.start();
