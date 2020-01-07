@@ -9,8 +9,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import java.time.LocalDate;
 
-@Data
-@Entity
+@Data       // Lombok
+@Entity     // JPA
 public class Student {
 
     @Id

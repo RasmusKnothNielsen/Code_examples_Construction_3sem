@@ -14,9 +14,10 @@ public class StackExample {
         stack.push(2);
         stack.push(3);
         stack.push(4);
+        stack.add(7);       // List functionality
 
         // peeking at the top element
-        System.out.println("Top element: " + stack.peek() + "\n");
+        System.out.println("\nTop element: " + stack.peek() + "\n");
 
         // Removes the top element of the Stack
         stack.pop();

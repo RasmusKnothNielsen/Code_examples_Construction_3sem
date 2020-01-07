@@ -31,6 +31,5 @@ public class StringStream {
         // Count the number of distinct words in the collection
         long distinctVocabulary = words.stream().filter(word -> !word.isBlank()).distinct().count();
         System.out.println(distinctVocabulary);
-
     }
 }

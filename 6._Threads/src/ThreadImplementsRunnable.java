@@ -1,6 +1,6 @@
 
 // Implements Runnable
-public class ThreadExtendsThread implements Runnable {
+public class ThreadImplementsRunnable implements Runnable {
 
     // Implementing the run() method
     public void run() {

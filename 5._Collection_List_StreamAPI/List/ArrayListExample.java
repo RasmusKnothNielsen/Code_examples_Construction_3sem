@@ -32,14 +32,14 @@ public class ArrayListExample {
         arrayList2.add("Fairy Tale");
         arrayList2.add("Is Upon Us");
         arrayList1.addAll(4, arrayList2);
-        System.out.println(arrayList1);
+        System.out.println(arrayList1 + "\n");
 
         // Iterate through an ArrayList with for each
-        System.out.println("Iterate using for each: ");
+        System.out.println("Iterate using enhanced for loop: ");
         for (String sentence : arrayList1) {
             System.out.print(sentence + " ");
         }
-        System.out.println();
+        System.out.println("\n");
 
         // Iterate through using the built in Iterator
         System.out.println("Iterate using Iterator: ");
@@ -47,11 +47,11 @@ public class ArrayListExample {
         while(iterator1.hasNext()) {
             System.out.print(iterator1.next() + " ");
         }
+        System.out.println("\n");
 
-
-
-
-
-
+        // Iterate through using forEach and Lambda
+        System.out.println("Iterate using forEach and Lambda: ");
+        arrayList1.stream().forEach(S -> System.out.print(S + " "));
+        System.out.println();
     }
 }

@@ -5,8 +5,8 @@ public class Example {
     public static void main(String[] args) {
 
         // Instantiate a newspaper
-        NewsPaper berlingske = new NewsPaper();
-        NewsPaper bt = new NewsPaper();
+        NewsPaper berlingske = new NewsPaper("Berlingske");
+        NewsPaper bt = new NewsPaper("BT");
 
         // Instantiate 4 Customers.
         Customer customer1 = new Customer();
@@ -29,8 +29,18 @@ public class Example {
         bt.setNews("Tusindvis af danskere får kompensation");
 
         // Print out the both newspapers from Customer 1
-        System.out.println("\n" + customer1.getNews(berlingske));
+
+        System.out.println("\nHer ses de nyheder som er tilgængelige for vores første kunde:");
+        System.out.println(customer1.getNews(berlingske));
         System.out.println(customer1.getNews(bt));
+        System.out.println();
+
+        bt.setNews("Henrik trodser alle advarsler til danskerne");
+
+        System.out.println("Her ses nyhederne efter BT har opdateret deres nyheder:");
+        System.out.println(customer1.getNews());
+
+
 
 
     }

@@ -18,13 +18,14 @@ public class Concurrency extends Thread {
         Concurrency concurrency3 = new Concurrency();
 
         // Priority can be set in case ressources are limited.
-//        concurrency1.setPriority(MAX_PRIORITY);
-//        concurrency3.setPriority(MIN_PRIORITY);
+        concurrency1.setPriority(MIN_PRIORITY);
+        concurrency2.setPriority(MIN_PRIORITY);
+        concurrency3.setPriority(MAX_PRIORITY);
 
         // Set name of the threads
-        concurrency1.setName("One");
-        concurrency2.setName("Two");
-        concurrency3.setName("Three");
+        concurrency1.setName("Thread One");
+        concurrency2.setName("Thread Two");
+        concurrency3.setName("Thread Three");
 
         // Start the threads
         concurrency1.start();
@@ -33,6 +34,7 @@ public class Concurrency extends Thread {
         // join() concurrency2 and 1 - concurrency3 waits for the other threads to finish before starting.
         concurrency1.join();
         concurrency2.join();
+        //concurrency3.join();
 
         concurrency3.start();
 

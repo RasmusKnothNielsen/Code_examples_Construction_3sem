@@ -15,6 +15,7 @@ public class UDPClient
 
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 
+        // Set to listen on port 6710
         DatagramSocket socket = new DatagramSocket(6710);
         InetAddress IPAddress = InetAddress.getByName("127.0.0.1");
 

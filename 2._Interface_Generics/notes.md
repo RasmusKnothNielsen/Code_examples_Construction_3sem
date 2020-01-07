@@ -31,12 +31,12 @@ F.eks. kunne et `Vehicle`-interface have en statisk metode `printVehicle(Vechicl
 "Interface instanser" findes ikke. Men interfaces kan bruges til at referere
 til objekter af klasser der implementerer dem. F.eks:
 ```
-List<Object> list = new ArrayList<>();
+Interface<Object> list = new Abstract<>();
 ```
-Her instantieres en `ArrayList`, men refereres til med `List`-interfacet.
+Her instantieres en `Abstract`, men refereres til med `Interface`-interfacet.
 Dette kan være smart da det giver let mulighed for at skrifte til andre 
 datastrukturer uden at skulle omskrive ret meget. 
-Hvis man opdager at `ArrayList` ikke er det bedste valg længere,
+Hvis man opdager at `Abstract` ikke er det bedste valg længere,
 så er det bare at udskifte selve instantieringen. Resten af koden vil stadig fungere.
 
 `Default Methods` er metoder med `default` keyword, hvor selve metoden 
@@ -59,9 +59,9 @@ Man bruger generics når man vil have funktionalitet der kan håndtere
 forskellige typer objekter, uden at man skal bekymre sig om typecasting.
 
 Uden brug af generics vil man, uden begrænsninger, kunne alle typer 
-objekter i en `ArrayList`.
+objekter i en `Abstract`.
 ```
-List v = new ArrayList();
+Interface v = new Abstract();
 v.add("test");
 v.add(10);
 Integer i = (Integer) v.get(0); // Run time error
@@ -73,7 +73,7 @@ kontrollere hvilken datatype man står med.
 Ved brug af generics kan man begrænse hvilken type objekter man arbejder
 med, og dermed også hvilken type objekter man trækker ud igen. 
 ```
-List<String> v = new ArrayList<>();
+Interface<String> v = new Abstract<>();
 v.add("test");
 //v.add(10); //Kan ikke længere lade sig gøre.
 String s = v.get(0);

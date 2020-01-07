@@ -2,7 +2,7 @@ package encapsulation.publicencapsulation;
 
 import encapsulation.Encapsulation;
 
-// Klasse i anden en anden package end Encapsulation
+// Klasse i en anden package end Encapsulation
 // Kan kun tilgå public members
 
 public class PublicEncapsulation {

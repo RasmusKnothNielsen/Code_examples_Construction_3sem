@@ -6,7 +6,7 @@ public class SemaphoreExample extends Thread {
     Semaphore sem;
     String threadName;
 
-    int sharedCount;
+    static int sharedCount;
 
     public SemaphoreExample(Semaphore sem, String threadName) {
         super(threadName);
@@ -18,7 +18,7 @@ public class SemaphoreExample extends Thread {
     public void run() {
 
         // run Thread "One"
-        if (this.getName().equals("One")) {
+        if (this.getName().equals("Thread One")) {
             System.out.println("Starting " + threadName);
             try {
                 // First, get a permit.
@@ -48,7 +48,7 @@ public class SemaphoreExample extends Thread {
         }
 
         // run thread "Two"
-        if (this.getName().equals("Two")) {
+        if (this.getName().equals("Thread Two")) {
             System.out.println("Starting " + threadName);
             try {
                 // First, get a permit.
@@ -85,8 +85,8 @@ public class SemaphoreExample extends Thread {
         Semaphore sem = new Semaphore(1); // If permits is 2, 2 threads would be able access the ressource.
 
         // Instantiating two SemaphoreExample objects
-        SemaphoreExample semaphoreExample1 = new SemaphoreExample(sem, "One");
-        SemaphoreExample semaphoreExample2 = new SemaphoreExample(sem, "Two");
+        SemaphoreExample semaphoreExample1 = new SemaphoreExample(sem, "Thread One");
+        SemaphoreExample semaphoreExample2 = new SemaphoreExample(sem, "Thread Two");
 
         // Starting threads
         semaphoreExample1.start();

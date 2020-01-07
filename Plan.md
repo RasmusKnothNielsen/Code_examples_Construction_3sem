@@ -6,13 +6,13 @@ Done
 2 - Interface + Generics
 Done
 
-3 - ADT: (For example our ArrayList) 
+3 - ADT: (For example our Abstract) 
 Done
 
 4 - Collection: Set, Stack, Queue, Map
 Done 
 
-5 - Collection (List) + StreamAPI
+5 - Collection (Interface) + StreamAPI
 Done
 
 6 - Threads
