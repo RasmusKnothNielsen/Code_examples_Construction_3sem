@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class HTTPserverTCP implements Runnable {
 
-    static final File PATH = new File("/Users/rasmusknothnielsen/Git/KEA_Computer_science/Semester3/Code_examples_Construction_3sem/7._TCP_UDP_Sockets/src/Webserver/WebPages");
+    static final File PATH = new File("");  // Find path to your webpages
     static final String DEFAULT_FILE = "index.html";
     static final String METHOD_NOT_SUPPORTED = "501.txt";
     static final String FILE_NOT_FOUND = "404.html";
