@@ -12,12 +12,12 @@ public class DequeExample {
         Deque<String> deque = new LinkedList<>();
 
         // Add elements in different ways to the head or tail of the deque
-        deque.addFirst("Element 2 (Added to head)");
-        deque.addLast("Element 3 (Added to tail)");
-        deque.push("Element 4 (Added to head)");
-        deque.offer("Element 5 (Added to tail)");   // This method comes from the Queue interface
-        deque.offerFirst("Element 6 (Added to head)");
-        deque.offerLast("Element 7 (Added to tail)");
+        deque.addFirst("Element 2 (Added to head)");    // From LinkedList
+        deque.addLast("Element 3 (Added to tail)");     // From LinkedList
+        deque.push("Element 4 (Added to head)");        // Stack Equivalent to Deque addFirst
+        deque.offer("Element 5 (Added to tail)");       // This method comes from the Queue interface
+        deque.offerFirst("Element 6 (Added to head)");  // Deque specific
+        deque.offerLast("Element 7 (Added to tail)");   // Deque specific
 
         // Print out the deque by using
         // java.util.AbstractCollection' toString method.
@@ -32,6 +32,19 @@ public class DequeExample {
             System.out.println("\t" + iterator.next());
         }
         System.out.println();
+
+        // Enhanced For loop
+        System.out.println("Using Enhanced For loop:");
+        for(String string : deque) {
+            System.out.println("\t" + string);
+        }
+        System.out.println();
+
+        // Lambda expression
+        System.out.println("Using Lambda expression:");
+        deque.stream().forEach(S -> System.out.println("\t" + S));
+        System.out.println();
+
 
         // Remove the head with a pop
         System.out.println("Deque before pop = " + deque);

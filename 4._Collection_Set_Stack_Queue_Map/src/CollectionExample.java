@@ -17,6 +17,7 @@ public class CollectionExample {
         integerCollection.add(3);
 
         stringCollection.add("Niki");
+
         System.out.println("After adding elements, Collection consists of: " + integerCollection + "\n");
 
         // Removes all elements in the Collection
@@ -54,13 +55,15 @@ public class CollectionExample {
         integerCollection.add(3);
         integerCollection.add(10);
 
-        // Different ways of iterating through a Collection - with a foreach loop
+        // Different ways of iterating through a Collection - with an enhanced for loop
+        System.out.println("Iterating through the Collection with enhanced for loop:");
         for (Integer element : integerCollection) {
             System.out.println(element);
         }
         System.out.println();
 
         // Iterating through the Collection with Iterator
+        System.out.println("Iterating through the Collection with iterator:");
         Iterator<Integer> collection = integerCollection.iterator();
         while (collection.hasNext()) {
             System.out.println(collection.next());
@@ -68,6 +71,7 @@ public class CollectionExample {
         System.out.println();
 
         // Iterating through the Collection with a forEach and a method reference
+        System.out.println("Iterating through the Collection with forEach and Method reference:");
         integerCollection.forEach(System.out::println);
 
 

@@ -26,7 +26,7 @@ public class BooksExample {
         System.out.println(books);
 
         // Use for each to iterate through the ArrayList
-        System.out.println("Iterating using For Each:");
+        System.out.println("Iterating using enhanced foor loop:");
         for(String book : books) {
             if (book.startsWith("K")) {
                 if (book.endsWith("e")) {
@@ -39,7 +39,7 @@ public class BooksExample {
 
         // Use Stream to iterate through the ArrayList
         // book is a lambda expression, which relates to the current element.
-        System.out.println("Iterating using Stream:");
+        System.out.println("Iterating using Stream and method references:");
 
         books.stream()
                 .filter(book -> book.startsWith("K"))
@@ -51,7 +51,7 @@ public class BooksExample {
         // by using a the method reference in our forEach operation.
         ArrayList<String> resultStream = new ArrayList<>();
 
-        System.out.println("Iterating using Stream:");
+        System.out.println("Iterating using Stream and method references, saving to another ArrayList:");
         books.stream()
                 .filter(book -> book.startsWith("K"))
                 .filter(book -> book.endsWith("e"))

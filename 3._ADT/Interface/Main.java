@@ -26,6 +26,7 @@ public class Main {
         integerList.add(2);
         integerList.add(4);
         integerList.add(7);
+        //integerList.add("test");
         System.out.println(integerList);
 
         // Get the size

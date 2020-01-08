@@ -1,7 +1,5 @@
 package Generics;
 
-import java.util.*;
-
 public class GenericListExample {
 
     public static void main(String[] args) {

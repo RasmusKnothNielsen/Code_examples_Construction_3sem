@@ -4,7 +4,9 @@ public class MapExample {
 
     public static void main(String[] args) {
 
-        // TreeMap below:
+        /*
+        TreeMap below:
+         */
         // instantiating a TreeMap
         TreeMap<Integer, String> treeMapUsers  = new TreeMap<>();
 
@@ -40,7 +42,9 @@ public class MapExample {
 
         System.out.println("Showing all values in the TreeMap: " + treeMapUsers.values() + "\n\n");
 
-        // HashMap below:
+        /*
+        HashMap below:
+         */
         // instantiating a HashMap
         HashMap<String, String> hashMapUsers = new HashMap<>();
 

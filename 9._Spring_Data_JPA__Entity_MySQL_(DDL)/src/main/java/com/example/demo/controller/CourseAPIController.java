@@ -23,4 +23,5 @@ public class CourseAPIController {
     public Course postCourse(@RequestBody Course course) {
         return courseRepository.save(course);
     }
+
 }
