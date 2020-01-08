@@ -1,0 +1,28 @@
+.trivia-paragraph {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+button {
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-green {
+    background-color: #63BF69;
+}
+
+.button-blue {
+    background-color: #6369CF;
+}

@@ -19,13 +19,13 @@ Done
 Done
 
 7 - TCP - UDP (Sockets)
-
+Done
 
 8 - Spring MVC - Web w. Thymeleaf
 Done
 
 9 - Spring Data JPA: Entity + MySQL (DDL)
-
+Done
 
 10 - Spring Rest + Data JPA: CrudRepository (DML)
 Done

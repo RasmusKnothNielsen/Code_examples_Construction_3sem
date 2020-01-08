@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demonstrating jQuery - AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css"/>
+</head>
+<body>
+
+<h1>Demonstrating jQuery - AJAX</h1>
+
+
+
+<hr>
+
+
+
+<div class="introduction">
+    <p>This tag is being appended through the use of jQuery's append method.</p>
+</div>
+
+<script>
+    var person = {
+        name: "Douglas Adams",
+        age: 42
+    };
+    var about = "Hi my name is " + person.name + ", and I am " + person.age + " years old.";
+
+    $(".introduction").append("<p>" + about + "</p>");
+</script>
+
+
+
+<hr>
+
+
+
+<div>
+    <p>Using jQuery - AJAX to contact the api "http://numbersapi.com/".</p>
+    <p>Recieving trivia about a random year every 10 seconds.</p>
+    <p class="trivia-paragraph"></p>
+</div>
+
+<script>
+    // Method for resetting the number trivia
+    function getRandomNumberTrivia() {
+        // AJAX get method
+        $.get("http://numbersapi.com/random/year", function response(data) {
+            // Using jQuery to clear and set new text
+            $(".trivia-paragraph")
+                .empty() // Clear old text
+                .text(data); // Set new text
+        });
+    }
+
+    getRandomNumberTrivia();
+
+    // Looping every 10 seconds
+    setInterval(function timeOut() {
+        getRandomNumberTrivia();
+    }, 10000)
+</script>
+
+
+
+<hr>
+
+
+
+<div>
+    <p>Using jQuery - AJAX to contact the api "https://api.nasa.gov" for their "Astronomy Picture of the Day"</p>
+</div>
+
+<div class="nasaImg"></div>
+
+<script>
+    var imgTagStart = "<img width=600px src='"; //Inline CSS width
+    var imgTagEnd = "'/>";
+
+    // AJAX GET request to api
+    $.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY", function response(data) {
+        // Appending class "nasaImg" with "data.url" using jQuery
+        $(".nasaImg").append(imgTagStart + data.url + imgTagEnd);
+    });
+</script>
+
+
+
+
+</body>
+</html>

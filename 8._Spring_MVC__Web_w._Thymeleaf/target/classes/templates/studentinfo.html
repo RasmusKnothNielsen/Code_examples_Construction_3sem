@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Demonstrating Thymeleaf</title>
+</head>
+<body>
+
+<h1>Demonstrating Thymeleaf</h1>
+<p>On this page all information is being read from a "Student"-object by Thymeleaf.</p>
+
+<!-- Using a link URL expression surrounding the variable expression -->
+<img th:src="@{${student.getImageURL()}}">
+<p>
+    ID: <span th:text="${student.getId()}"></span>
+</p>
+<p>
+    Name:
+    <span th:text="${student.getFirstName()}"></span>
+    <span th:text="${student.getLastName()}"></span>
+</p>
+<p>
+    Date of Birth: <span th:text="${student.getDob()}"></span>
+</p>
+
+</body>
+</html>

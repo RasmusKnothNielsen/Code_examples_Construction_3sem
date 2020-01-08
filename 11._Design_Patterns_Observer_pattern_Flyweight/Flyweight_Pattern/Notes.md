@@ -28,7 +28,7 @@ Flyweight can be recognized by a creation method that returns cached objects ins
 Trees in a forest
 
 ###Intrinsic state:
-Fields that contain uncharging data duplicated across many objects. 
+Fields that contain unchanging data duplicated across many objects. 
 Ex: Name of tree type, color and texture.
 
 ###Extrinsic state:
